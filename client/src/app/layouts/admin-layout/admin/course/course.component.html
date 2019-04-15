@@ -1,0 +1,114 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                   
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Course Name">
+                                    </mat-form-field>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Available Sheat" >
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                  <label>About Course</label>
+                                  <mat-form-field class="example-full-width">
+                                     <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
+                                   </mat-form-field>
+                                </div>
+                            </div>
+                           
+                           
+                           
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Save</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Course List</h4>
+                      
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Course Name
+                                  </th>
+                                  <th>
+                                      Total Sheat
+                                  </th>
+                                  <th>
+                                      Action
+                                  </th>
+                                 
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          1
+                                      </td>
+                                      <td>
+                                          B.Pharma
+                                      </td>
+                                      <td>
+                                          100
+                                      </td>
+                                      
+                                      <td class="td-actions">
+                                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          2
+                                      </td>
+                                      <td>
+                                          D.Pharma
+                                      </td>
+                                      <td>
+                                          50
+                                      </td>
+                                      
+                                      <td class="td-actions">
+                                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </td>
+                                  </tr>
+                                  
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  

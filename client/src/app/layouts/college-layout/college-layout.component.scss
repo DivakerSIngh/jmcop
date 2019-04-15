@@ -1,0 +1,32 @@
+
+.mainmenu ul#nav > li {
+    display: inline-block;
+    
+    position: relative;
+    margin: 0px -12px 0px 0px !important;
+}
+
+.mainmenu ul#nav > li > a{
+
+    line-height: 40px !important;
+}
+
+#nav {
+    list-style: outside none none;
+    margin-top: 12px !important;
+    padding: 0;
+}
+
+.margin-top{
+
+    margin: -9px 0px 0px 4px;
+}
+
+.logomain{
+    height: 59px;
+    margin: -25px 0px 0px 0px;
+}
+
+.menu-btn{
+    border-bottom: 1px solid #2d3e50;
+}

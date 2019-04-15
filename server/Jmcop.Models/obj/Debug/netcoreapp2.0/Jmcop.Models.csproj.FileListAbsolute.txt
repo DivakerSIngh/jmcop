@@ -1,0 +1,11 @@
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\bin\Debug\netcoreapp2.0\Jmcop.Models.deps.json
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\bin\Debug\netcoreapp2.0\Jmcop.Models.runtimeconfig.json
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\bin\Debug\netcoreapp2.0\Jmcop.Models.runtimeconfig.dev.json
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\bin\Debug\netcoreapp2.0\Jmcop.Models.dll
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\bin\Debug\netcoreapp2.0\Jmcop.Models.pdb
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\obj\Debug\netcoreapp2.0\Jmcop.Models.csprojAssemblyReference.cache
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\obj\Debug\netcoreapp2.0\Jmcop.Models.csproj.CoreCompileInputs.cache
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\obj\Debug\netcoreapp2.0\Jmcop.Models.AssemblyInfoInputs.cache
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\obj\Debug\netcoreapp2.0\Jmcop.Models.AssemblyInfo.cs
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\obj\Debug\netcoreapp2.0\Jmcop.Models.dll
+D:\FreelanceProject\JMCOP_Project\Project\server\Jmcop.Models\obj\Debug\netcoreapp2.0\Jmcop.Models.pdb
