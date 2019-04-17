@@ -21,9 +21,12 @@ import {
   MatRippleModule,
   MatFormFieldModule,
   MatTooltipModule,
-  MatSelectModule,MatGridListModule,MatProgressSpinnerModule
+  MatSelectModule,MatGridListModule,MatProgressSpinnerModule,MatPaginatorModule
 } from '@angular/material';
+
 import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 @NgModule({
   imports: [
     CommonModule,
@@ -32,10 +35,15 @@ import { AgmCoreModule } from '@agm/core';
     MatButtonModule,
     MatRippleModule,
     MatFormFieldModule,
+    MatPaginatorModule,
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
     MatGridListModule,MatProgressSpinnerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDz17uV4GBRwRhEq7fodPHy5WR5-Ho0hmg'
     })

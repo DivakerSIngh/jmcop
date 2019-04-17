@@ -18,7 +18,7 @@
               <input matInput placeholder="**********" (keyup)="keyup($event)" #refName required  formControlName="password"  >
             </mat-form-field>
        
-        <button mat-raised-button type="submit" class="btn btn-danger" (click)="login()" [disabled]="userForm.invalid">Login</button>
+        <button mat-raised-button type="submit" class="btn btn-danger"  [disabled]="userForm.invalid">Login</button>
         <p class="message">Not registered? <a href="#">Forgot Password</a></p>
       </form>
     </div>

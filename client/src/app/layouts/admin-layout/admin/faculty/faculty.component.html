@@ -5,27 +5,27 @@
               <div class="card">
                  
                   <div class="card-body">
-                      <form>
+                      <form  [formGroup]="frm" (ngSubmit)="submit()" novalidate>
                           <div class="row">
                               
                               <div class="col-md-3">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Full Name">
+                                    <input matInput placeholder="Full Name" #refName required  formControlName="name">
                                   </mat-form-field>
                               </div>
-                              <div class="col-md-3">
+                              <!-- <div class="col-md-3">
                                   <mat-form-field class="example-full-width">
                                     <input matInput placeholder="Email address" type="email">
                                   </mat-form-field>
-                              </div>
-                              <div class="col-md-3">
+                              </div> -->
+                              <!-- <div class="col-md-3">
                                 <mat-form-field class="example-full-width">
                                   <input matInput placeholder="Mobile" type="tel">
                                 </mat-form-field>
-                            </div>
+                            </div> -->
                             <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Designation" type="text">
+                                <input matInput placeholder="Designation" type="text" #refName required  formControlName="designation">
                               </mat-form-field>
                             </div>
                           </div>
@@ -33,12 +33,12 @@
                              
                               <div class="col-md-3">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Qualification" type="text">
+                                  <input matInput placeholder="Qualification" type="text" #refName required  formControlName="qualification">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-9">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Description" type="text">
+                                  <input matInput placeholder="Description" type="text" #refName required  formControlName="description">
                                 </mat-form-field>
                               </div>
                               <!-- <div class="col-md-6">
@@ -51,7 +51,7 @@
                           </div>
                          
                          
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Save</button>
+                          <button mat-raised-button type="submit"  [disabled]="frm.invalid" class="btn btn-danger pull-right">Save</button>
                           <div class="clearfix"></div>
                       </form>
                   </div>
@@ -75,35 +75,33 @@
                                     Name
                                 </th>
                                 <th>
-                                    Email
-                                </th>
+                                        Qualification
+                                    </th>
+                               
                                 <th>
-                                    Mobile
-                                </th>
-                                <th>
-                                    Qualification
+                                    Designation
                                 </th>
                                 <th>
                                   Action
                               </th>
                             </thead>
                             <tbody>
-                                <tr>
+
+
+                                <tr *ngFor="let item of facultyList">
                                     <td>
                                         1
                                     </td>
                                     <td>
-                                        Dakota Rice
+                                       {{item.name}}
                                     </td>
                                     <td>
-                                        Niger
+                                            {{item.qualification}}
                                     </td>
                                     <td>
-                                        Oud-Turnhout
+                                            {{item.designation}}
                                     </td>
-                                    <td class="text-primary">
-                                        $36,738
-                                    </td>
+                                   
                                     <td class="td-actions">
                                       <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
                                           <i class="material-icons">edit</i>
@@ -113,58 +111,13 @@
                                       </button>
                                   </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        2
-                                    </td>
-                                    <td>
-                                        Minerva Hooper
-                                    </td>
-                                    <td>
-                                        Curaçao
-                                    </td>
-                                    <td>
-                                        Sinaai-Waas
-                                    </td>
-                                    <td class="text-primary">
-                                        $23,789
-                                    </td>
-                                    <td class="td-actions ">
-                                      <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                          <i class="material-icons">edit</i>
-                                      </button>
-                                      <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                          <i class="material-icons">close</i>
-                                      </button>
-                                  </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3
-                                    </td>
-                                    <td>
-                                        Sage Rodriguez
-                                    </td>
-                                    <td>
-                                        Netherlands
-                                    </td>
-                                    <td>
-                                        Baileux
-                                    </td>
-                                    <td class="text-primary">
-                                        $56,142
-                                    </td>
-                                    <td class="td-actions">
-                                      <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                          <i class="material-icons">edit</i>
-                                      </button>
-                                      <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                          <i class="material-icons">close</i>
-                                      </button>
-                                  </td>
-                                </tr>
-                                
                             </tbody>
+                            <tfoot>
+                                    <mat-paginator [length]="100"
+                                    [pageSize]="10"
+                                    [pageSizeOptions]="[5, 10, 25, 100]">
+                      </mat-paginator>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
