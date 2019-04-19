@@ -5,31 +5,33 @@
                 <div class="card">
                    
                     <div class="card-body">
-                        <form>
+                        <form [formGroup]="frm" (ngSubmit)="submit()" novalidate>
                             <div class="row">
                                 
                                 <div class="col-md-3">
+                                    
                                     <mat-form-field class="example-full-width">
-                                      <input matInput placeholder="Course Name">
+                                      <input matInput placeholder="Course Name"  #refName required  formControlName="name">
                                     </mat-form-field>
                                 </div>
                                 
                                 <div class="col-md-3">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Available Sheat" >
+                                    <input matInput placeholder="Available Sheat"  #refName required  formControlName="seates">
                                   </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                   <label>About Course</label>
                                   <mat-form-field class="example-full-width">
-                                     <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
+                                     <textarea matInput #refName required   formControlName="description" placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
                                    </mat-form-field>
                                 </div>
                             </div>
                            
                            
                            
-                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Save</button>
+                            <button mat-raised-button type="submit" *ngIf="pageMode=='add'"  [disabled]="frm.invalid" class="btn btn-danger pull-right">Save</button>
+                            <button mat-raised-button type="submit"  *ngIf="pageMode=='update'"  [disabled]="frm.invalid" class="btn btn-danger pull-right">Update</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
@@ -47,11 +49,14 @@
                           <table class="table">
                               <thead class=" text-primary">
                                   <th>
-                                      ID
+                                      No
                                   </th>
                                   <th>
                                       Course Name
                                   </th>
+                                  <th>
+                                       About Course
+                                    </th>
                                   <th>
                                       Total Sheat
                                   </th>
@@ -61,48 +66,40 @@
                                  
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          B.Pharma
-                                      </td>
-                                      <td>
-                                          100
-                                      </td>
-                                      
-                                      <td class="td-actions">
-                                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
-                                      </td>
-                                      <td>
-                                          D.Pharma
-                                      </td>
-                                      <td>
-                                          50
-                                      </td>
-                                      
-                                      <td class="td-actions">
-                                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </td>
-                                  </tr>
-                                  
+                                    <tr *ngFor="let item of courseList let i = index" [attr.data-index]="i">
+                                            <td>
+                                               {{i+1}}
+                                            </td>
+                                            <td>
+                                               {{item.name}}
+                                            </td>
+                                            <td>
+                                                    {{item.description}}
+                                                  
+                                            </td>
+                                            <td>
+                                                    {{item.seates}}
+                                            </td>
+                                           
+                                            <td class="td-actions">
+                                              <button mat-raised-button type="button" matTooltip="Edit Task" (click)="edit(item,id)" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                  <i class="material-icons">edit</i>
+                                              </button>
+                                              <button mat-raised-button type="button" matTooltip="Remove" (click)="delete(item,id)" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                                  <i class="material-icons">close</i>
+                                              </button>
+                                          </td>
+                                        </tr>
+                                       
                               </tbody>
+                              <tfoot>
+                                    <mat-paginator [length]="length"
+                                    [pageSize]="pageSize"
+                                    [pageIndex]="pageIndex"
+                                    [pageSizeOptions]="pageSizeOptions"
+                                    (page)="loadMore($event)">
+                      </mat-paginator>
+                            </tfoot>
                           </table>
                       </div>
                   </div>

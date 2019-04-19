@@ -1,7 +1,7 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { ApiService } from "../../../../service/api.service";
 import * as constants from '../../../../service/apiConfig';
 import { LoaderService } from 'app/service/loader.service';
@@ -12,14 +12,22 @@ import { LoaderService } from 'app/service/loader.service';
   styleUrls: ['./faculty.component.scss']
 })
 export class FacultyComponent implements OnInit {
+  
+  pageMode='add'
+  facultyList=[];
+  length = 100;
+  pageSize = 10;
+  pageSizeOptions = [5, 10, 25, 100];
+  pageNumber:number=0;
 
-  facultyList:any=[];
+
   frm = new FormGroup({
     //email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
     name: new FormControl('', [Validators.required]),
     designation: new FormControl('', [Validators.required]),
     qualification: new FormControl('', [Validators.required]),
-    description: new FormControl('', [Validators.required])
+    description: new FormControl('', [Validators.required]),
+    id: new FormControl('')
 
   })
   constructor(private loader:LoaderService,  private elementRef: ElementRef,private snackBar:MatSnackBar, private router: Router, private http: ApiService) {
@@ -29,34 +37,28 @@ export class FacultyComponent implements OnInit {
   ngOnInit() {
 
   }
+  loadMore(evt){
 
-  getAll(){
-    debugger
-      var result = this.http.httpGet(constants.facultyList);
-      result.subscribe((response) => {
-        if (response.status == 200) {
-          debugger
-          this.facultyList=response.result;
-        } else {
-       
-        }
-  
-      })
-   
+this.pageNumber=evt.pageIndex
+this.pageSize=evt.pageSize;
+    this.getAll();
   }
-  submit(){
 
-    debugger
-  if (this.frm.valid) {
-    // let  = {
-    //   email: this.frm.value.email, password: this.frm.value.password
-    // }
-    var result = this.http.httpPostLogin(constants.addFaculty, this.frm.value);
-    result.subscribe((response) => {
+  edit(req,id){
+    this.pageMode='update'
+    this.frm.setValue({
+      id:req.id,
+      name: req.name,
+      designation: req.designation,
+      qualification:req.qualification,
+      description: req.description,
+    })
+  }
+
+  delete(req,id){
+   
+    this.http.httpPostLogin(constants.deleteFaculty, req).subscribe((response) => {
       if (response.status == 200) {
-        debugger
-        this.frm.reset;
-        this.frm.pristine;
         this.getAll();
       } else {
      
@@ -64,11 +66,50 @@ export class FacultyComponent implements OnInit {
 
     })
   }
-  else {
-    Object.keys(this.frm.controls).forEach((item) => {
-      this.frm.get(item).markAsDirty();
-      this.frm.get(item).markAsTouched();
-    })
+
+
+  getAll(){
+      var result = this.http.httpGet(constants.facultyList+"pageNumber="+this.pageNumber+"&pageSize="+this.pageSize);
+      result.subscribe((response) => {
+        if (response.status == 200) {
+          this.facultyList=response.result;
+          this.length=response.pages;
+        } else {
+       
+        }
+  
+      })
+   
   }
-  }
+  
+
+  submit(){
+    let index = this.frm.getRawValue().id
+      if(index!="" && index != null) {
+        this.facultyList[index] = this.frm.value
+        this.http.httpPostLogin(constants.updateFaculty, this.frm.value).subscribe((response) => {
+          if (response.status == 200) {
+            this.getAll();
+            this.pageMode='add';
+          } else {
+        
+          }
+        })
+      } else {
+        
+          this.frm.value.id=0,
+        
+        this.http.httpPostLogin(constants.addFaculty, this.frm.value).subscribe((response) => {
+          if (response.status == 200) {
+            this.getAll();
+          } else {
+        
+          }
+        })     
+      }
+      this.frm.reset();
+    
+      }
 }
+
+

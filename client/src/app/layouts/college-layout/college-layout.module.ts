@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { SliderModule } from 'ngx-slider';
 import { OwlModule } from 'ngx-owl-carousel';
+import { SlickModule } from 'ngx-slick';
 
 
 
@@ -15,8 +16,9 @@ import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   imports: [
-    CommonModule,SliderModule,OwlModule,
-    
+    CommonModule,SliderModule,
+    //OwlModule,
+    SlickModule.forRoot(),
     RouterModule.forChild(CollegeLayoutRoutingModule),
   ],
   declarations: [HomeComponent]

@@ -27,9 +27,9 @@ namespace Jmcop.Repository
             return _dbContext.Set<T>().Find(id);
         }
 
-        public virtual IEnumerable<T> List()
+        public virtual IQueryable<T> List()
         {
-            return _dbContext.Set<T>().AsEnumerable();
+            return _dbContext.Set<T>().AsQueryable();
         }
 
         public virtual IEnumerable<T> List(System.Linq.Expressions.Expression<Func<T, bool>> predicate)

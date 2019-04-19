@@ -9,6 +9,6 @@ namespace Jmcop.Models
         public string status { get; set; }
         public int errorCode { get; set; }
         public object result { get; set; }
-        public object extra { get; set; }
+        public int pages { get; set; }
     }
 }

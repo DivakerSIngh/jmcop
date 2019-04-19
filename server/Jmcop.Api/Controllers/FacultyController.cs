@@ -21,16 +21,46 @@ namespace Jmcop.Api.Controllers
         }
         [HttpGet]
         [Route("getall")]
-        public IActionResult GetAll()
+        public IActionResult GetAll([System.Web.Http.FromUri] PagingModel pagingModel)
         {
-            var lst = _faculty.List().ToList();
-            if (lst != null)
+            var lst = _faculty.List();
+
+            #region Paging
+            int count = lst.Count();
+            int CurrentPage = pagingModel.pageNumber+1;
+            int PageSize = pagingModel.pageSize;
+            int TotalCount = count;
+            int TotalPages = (int)Math.Ceiling(count / (double)PageSize);
+
+            // Returns List of Customer after applying Paging   
+            var items = lst.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+
+            // if CurrentPage is greater than 1 means it has previousPage  
+            var previousPage = CurrentPage > 1 ? "Yes" : "No";
+
+            // if TotalPages is greater than CurrentPage means it has nextPage  
+            var nextPage = CurrentPage < TotalPages ? "Yes" : "No";
+
+            var paginationMetadata = new
+            {
+                totalCount = TotalCount,
+                pageSize = PageSize,
+                currentPage = CurrentPage,
+                totalPages = TotalPages,
+                previousPage,
+                nextPage
+            };
+            #endregion
+
+
+            if (items != null)
             {
                 var res = new ApiResponse()
                 {
                     status = StatusCodes.Status200OK.ToString(),
                     errorCode = StatusCodes.Status200OK,
-                    result = lst
+                    result = items,
+                    pages= count
                 };
                 return Ok(res);
             }
@@ -63,6 +93,51 @@ namespace Jmcop.Api.Controllers
             }
           
 
+        }
+
+        [HttpPost]
+        [Route("update")]
+        public IActionResult Update([FromBody]Faculty facility)
+        {
+            try
+            {
+                _faculty.Update(facility);
+
+                var res = new ApiResponse()
+                {
+                    status = StatusCodes.Status200OK.ToString(),
+                    errorCode = StatusCodes.Status200OK,
+                    result = null
+                };
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+                return Forbid();
+            }
+
+
+        }
+
+        [HttpPost]
+        [Route("delete")]
+        public IActionResult Delete([FromBody]Faculty facility)
+        {
+            try
+            {
+                _faculty.Delete(facility);
+                var res = new ApiResponse()
+                {
+                    status = StatusCodes.Status200OK.ToString(),
+                    errorCode = StatusCodes.Status200OK,
+                    result = null
+                };
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+                return Forbid();
+            }
         }
 
     }

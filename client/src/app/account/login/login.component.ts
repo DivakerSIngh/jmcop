@@ -50,8 +50,8 @@ login() {
     var result = this.http.httpPostLogin(constants.loginUrl, loginData);
     result.subscribe((response) => {
       if (response.status == 200) {
-        debugger
-       
+        
+        localStorage.setItem('userDetails',JSON.stringify(response.result));
         localStorage.setItem('name', response.result.name);
         localStorage.setItem('email', response.result.email);
        // localStorage.setItem('user-access', JSON.stringify(response.data));
