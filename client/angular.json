@@ -25,7 +25,9 @@
               "node_modules/owl.carousel/dist/assets/owl.carousel.css",
               "src/assets/scss/material-dashboard.scss",
               "src/assets/css/demo.css",
-              "src/assets/css/web-style.css"
+              "src/assets/css/web-style.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+    "node_modules/slick-carousel/slick/slick-theme.scss"
               
             ],
             "scripts": [
@@ -36,7 +38,9 @@
               "node_modules/moment/moment.js",
               "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
               "node_modules/bootstrap-notify/bootstrap-notify.js",
-              "node_modules/chartist/dist/chartist.js"
+              "node_modules/chartist/dist/chartist.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
             
             ]
           },

@@ -4,24 +4,29 @@
                     <li><a href="#">Course</a></li>
                     <li>Course Details</li>
                   </ul>
-        <div class="section-title-wrapper">
-            <div class="section-title section">
-                <h3>B.Pharma</h3>
-                <p>JMCOP offers Four years, full time Graduate &amp; Two Years Post Graduate Program in B.Pharma &amp; M.Pharma. (Approved by All India Council for Technical Education, Ministry of HRD, and Government of India).</p>
-              </div>
-          </div>
-        <div class="row box-shad">
-           
-         <div class="col-sm-4">
-            <img src="../../../../../assets/img/college/course/3.jpg">
-         </div>
-         <div class="col-sm-4">
-            <p>JMCOP offers Four years, full time Graduate &amp; Two Years Post Graduate Program in B.Pharma &amp; M.Pharma. (Approved by All India Council for Technical Education, Ministry of HRD, and Government of India).</p>
-         </div>
-        </div>
+                  <div class="course-div" *ngFor="let item of courseList">
+                      <div class="section-title-wrapper">
+                          <div class="section-title section">
+                              <h3>{{item.name}}</h3>
+                              <div class="single-item-text-info">
+                                  <span>Available Seats: <span>{{item.seates}}</span></span>
+                              </div>
+                            </div>
+                        </div>
+                      <div class="row box-shad">
+                         
+                       <div class="col-sm-4">
+                          <img src="../../../../../assets/img/college/course/3.jpg">
+                       </div>
+                       <div class="col-sm-8">
+                          <p>{{item.description}}</p>
+                       </div>
+                      </div>
+                  </div>
+     
 
 
-        <div class="section-title-wrapper">
+        <!-- <div class="section-title-wrapper">
             <div class="section-title section">
                 <h3>D.Pharma</h3>
                 <p>JMCOP offers Four years, full time Graduate &amp; Two Years Post Graduate Program in B.Pharma &amp; M.Pharma. (Approved by All India Council for Technical Education, Ministry of HRD, and Government of India).</p>
@@ -34,5 +39,5 @@
          <div class="col-sm-4">
             <p>JMCOP offers Four years, full time Graduate &amp; Two Years Post Graduate Program in B.Pharma &amp; M.Pharma. (Approved by All India Council for Technical Education, Ministry of HRD, and Government of India).</p>
          </div>
-        </div>
+        </div> -->
     </div>

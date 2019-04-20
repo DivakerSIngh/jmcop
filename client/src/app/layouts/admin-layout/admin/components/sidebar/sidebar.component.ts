@@ -20,7 +20,7 @@ export const ROUTES: RouteInfo[] = [
     // { path: '/admin/table-list', title: 'Table List',  icon:'content_paste', class: '' },
     // { path: '/admin/typography', title: 'Typography',  icon:'library_books', class: '' },
     // { path: '/admin/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    { path: '/admin/maps', title: 'Maps',  icon:'location_on', class: '' },
+    // { path: '/admin/maps', title: 'Maps',  icon:'location_on', class: '' },
     // { path: '/admin/notifications', title: 'Notifications',  icon:'notifications', class: '' },
    
 ];
@@ -35,7 +35,7 @@ export class SidebarComponent implements OnInit {
   userdetails:any;
   constructor() { 
 
-  this.userdetails= JSON.parse(localStorage.getItem('userdetails'))
+  this.userdetails= JSON.parse(localStorage.getItem('userDetails'))
 
    
   }

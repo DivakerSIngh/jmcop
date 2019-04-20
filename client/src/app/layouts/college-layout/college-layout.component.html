@@ -37,16 +37,6 @@
     ============================================ -->
         <link rel="stylesheet" href="../../../../assets/css/college/font-awesome.min.css">
         
-    <!-- Owl Carousel CSS
-    ============================================ -->
-        <!-- <link rel="stylesheet" href="../../../../assets/css/college/owl.carousel.css"> -->
-        
-    <!-- jquery-ui CSS
-    ============================================ -->
-        <!-- <link rel="stylesheet" href="../../../../assets/css/college/jquery-ui.css"> -->
-        
-    <!-- Meanmenu CSS
-    ============================================ -->
         <link rel="stylesheet" href="../../../../assets/css/college/meanmenu.min.css">
         
     <!-- Animate CSS
@@ -56,14 +46,7 @@
     <!-- Animated Headlines CSS
     ============================================ -->
         <link rel="stylesheet" href="../../../../assets/css/college/animated-headlines.css">
-        
-        <!-- Nivo slider CSS
-    ============================================ -->
-    <!-- <link rel="stylesheet" href="lib/nivo-slider/../../../../assets/css/college/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="lib/nivo-slider/../../../../assets/css/college/preview.css" type="text/css" media="screen" /> -->
-        
-    <!-- Metarial Iconic Font CSS
-    ============================================ -->
+     
         <link rel="stylesheet" href="../../../../assets/css/college/material-design-iconic-font.css">
         <link rel="stylesheet" href="../../../../assets/css/college/material-design-iconic-font.min.css">
         
@@ -87,33 +70,6 @@
     ============================================ -->
         <link rel="stylesheet" href="../../../../assets/css/college/responsive.css">
         
-    <!-- Modernizr JS
-    ============================================ -->		
-      
-      
-        <!-- Color Css Files
-    ============================================ -->	
-        <!-- <link rel="alternate stylesheet" type="text/css" href="switcher/color-one.css" title="color-one" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-two.css" title="color-two" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-three.css" title="color-three" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-four.css" title="color-four" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-five.css" title="color-five" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-six.css" title="color-six" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-seven.css" title="color-seven" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-eight.css" title="color-eight" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-nine.css" title="color-nine" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-ten.css" title="color-ten" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/color-ten.css" title="color-ten" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/pattren1.css" title="pattren1" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/pattren2.css" title="pattren2" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/pattren3.css" title="pattren3" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/pattren4.css" title="pattren4" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/pattren5.css" title="pattren5" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/background1.css" title="background1" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/background2.css" title="background2" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/background3.css" title="background3" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/background4.css" title="background4" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="switcher/background5.css" title="background5" media="screen" /> -->
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -130,7 +86,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-7 col-md-6 col-sm-5 hidden-xs">
-                                    <span>Have any question? +9711226828</span>
+                                      
+                                    <span><i class="fa fa-phone"></i> +9711226828</span> | <span><i class="fa fa-envelope-o"></i>info@jmcom.org</span> 
+                                    
                                 </div>
                                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
                                     <div class="header-top-right">
@@ -283,11 +241,8 @@
                                                             <li><a href="courses-details.html">Download Broucher 2019-2020</a></li>
                                                         </ul> -->
 
-                                                        <button mat-button [matMenuTriggerFor]="matadmisiion">Admission  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                        <mat-menu #matadmisiion="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">Download Broucher 2019-2020</button>
-                                                          
-                                                        </mat-menu>
+                                                        <button mat-button >Admission</button>
+                                                       
                                                     </li>
                                                     <li>
                                                         <!-- <a href="courses.html">Academics</a>
@@ -295,11 +250,8 @@
                                                             <li><a href="courses-details.html">Notice</a></li>
                                                         </ul> -->
 
-                                                        <button mat-button [matMenuTriggerFor]="mataca">Academics  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                        <mat-menu #mataca="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/academics']">Notice</button>
-                                                          
-                                                        </mat-menu>
+                                                        <button mat-button >Academics</button>
+                                                      
                                                     </li>
                                                     <li>
                                                             <button mat-menu-item [routerLink]="['/gallery']">Gallery</button>
@@ -487,64 +439,14 @@
                 <!--About Area Start--> 
                
                 <router-outlet></router-outlet>
-                     
-               
-                <!--End of About Area-->
-                <!--Course Area Start-->
-              
-               
-                <!--End of Event Area-->
-                <!--Newsletter Area Start-->
-                <div class="newsletter-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5">
-                                <div class="newsletter-content">
-                                    <h3>SUBSCRIBE</h3>
-                                    <h2>TO OUR NEWSLETTER</h2>
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <div class="newsletter-form angle">
-                                    <form action="#" id="mc-form" class="mc-form footer-newsletter fix">
-                                        <div class="subscribe-form">
-                                            <input id="mc-email" type="email" name="email" placeholder="Enter your email address...">
-                                            <button id="mc-submit" type="submit">SUBSCRIBE</button>
-                                        </div>    
-                                    </form>
-                                    <!-- mailchimp-alerts Start -->
-                                    <div class="mailchimp-alerts text-centre fix pull-right">
-                                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                        <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                                        <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                                    </div>
-                                    <!-- mailchimp-alerts end -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!--End of Newsletter Area-->
                 <!--Footer Widget Area Start-->
                 <div class="footer-widget-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-3 col-sm-4">
-                                <div class="single-footer-widget">
-                                    <div class="footer-logo">
-                                        <a href="index.html">JMCOP</a>
-                                    </div>
-                                    <p>There are many variations of course of medical science to better future </p>
-                                    <div class="social-icons">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-rss"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-4">
+                           
+                            <div class="col-md-6 col-sm-6">
                                 <div class="single-footer-widget">
                                     <h3>GET IN TOUCH</h3>
                                     <a href="tel:094127 12563"><i class="fa fa-phone"></i>094127 12563</a>
@@ -553,16 +455,16 @@
                                     <span><i class="fa fa-map-marker"></i>Vill bavanpur, bakaena, Chandpur, Uttar Pradesh 246725</span>
                                 </div>
                             </div>
-                            <div class="col-md-3 hidden-sm">
+                            <div class="col-sm-6 hidden-sm">
                                 <div class="single-footer-widget">
                                     <h3>Useful Links</h3>
                                     <ul class="footer-list">
-                                        <li><a href="#">Teachers &amp; Staff</a></li>
-                                        <li><a href="#">Our Courses</a></li>
-                                        <li><a href="#">Courses Categories</a></li>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Terms &amp; Conditions</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a [routerLink]="['/faculty']">Teachers &amp; Staff</a></li>
+                                        <li><a [routerLink]="['/course']">Our Courses</a></li>
+                                        <li><a [routerLink]="['/department']">Department</a></li>
+                                        <li><a [routerLink]="['/gallery']">Gallery</a></li>
+                                        <li><a [routerLink]="['/home']">Terms &amp; Conditions</a></li>
+                                        <li><a [routerLink]="['/home']">Privacy Policy</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -576,7 +478,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 col-sm-7">
-                                <!-- <span>Copyright &copy; Educat 2017.All right reserved.Created by <a href="#">Educat</a></span> -->
+                                <!-- <span>Copyright &copy; Jmcop2017.All right reserved.Created by <a href="#">Educat</a></span> -->
                             </div>
                             <div class="col-md-6 col-sm-5">
                                 <div class="column-right">

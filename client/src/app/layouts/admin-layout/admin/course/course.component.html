@@ -92,15 +92,16 @@
                                         </tr>
                                        
                               </tbody>
-                              <tfoot>
-                                    <mat-paginator [length]="length"
-                                    [pageSize]="pageSize"
-                                    [pageIndex]="pageIndex"
-                                    [pageSizeOptions]="pageSizeOptions"
-                                    (page)="loadMore($event)">
-                      </mat-paginator>
-                            </tfoot>
+                              
                           </table>
+                          <div class="pager-botom">
+                                <mat-paginator [length]="length"
+                                [pageSize]="pageSize"
+                                [pageIndex]="pageIndex"
+                                [pageSizeOptions]="pageSizeOptions"
+                                (page)="loadMore($event)">
+                  </mat-paginator>
+                         </div>
                       </div>
                   </div>
               </div>

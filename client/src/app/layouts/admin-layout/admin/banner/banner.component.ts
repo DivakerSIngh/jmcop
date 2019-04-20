@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from 'app/service/api.service';
 import * as constants from '../../../../service/apiConfig';
 import { HttpClient, HttpRequest, HttpEventType, HttpResponse } from '@angular/common/http'
+import { LoaderService } from 'app/service/loader.service';
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -12,18 +13,19 @@ export class BannerComponent implements OnInit {
   fileToUpload: File = null;
   formData = new FormData();
   imgURL:any;
+  homeBanner:any=[];
   public progress: number;
   public message: string;
-  tiles: Tile[] = [
-    {text: 'One', cols: 1, rows: 1, color: '#f05a66',url:''},
-    {text: 'Two', cols: 1, rows: 1, color: '#f05a66',url:''},
-    {text: 'Three', cols: 1, rows: 1, color: '#f05a66',url:''},
-    {text: 'Four', cols: 1, rows: 1, color: '#f05a66',url:''},
-  ];
+  tiles: Tile[];
+  gallery: Tile[];
+  bannerAllImages:any=[];
   @ViewChild('fileInput') fileInput:any;
-  constructor( private http: ApiService,private httpc: HttpClient) { }
+  @ViewChild('fileInputgallery') fileInputgallery:any;
+  
+  constructor(private loader:LoaderService, private http: ApiService,private httpc: HttpClient) { }
 
   ngOnInit() {
+    this.getAllHomePageBanner();
   }
   uploadFile($event){
 
@@ -54,43 +56,95 @@ export class BannerComponent implements OnInit {
     }
   }
 
-uploadToServer(){
+uploadToServer(type){
 
-    this.uploadFileToActivity(this.fileToUpload); 
+    this.uploadFileToActivity(this.fileToUpload,type); 
 }
 
-  uploadFileToActivity(file:any) {
-    debugger
- // if (files.length === 0)
-  //   return;
+getAllHomePageBanner(){
+  
+  this.http.httpGet(constants.getallBanner).subscribe((response) => {
+    this.tiles=[];
+    this.gallery=[];
+    if (response.status == 200) {
+     this.bannerAllImages=response.result;
+     this.bannerAllImages.forEach(element => {
+       if(element.type==1){
+        this.tiles.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.imgUrl,id:element.id});
+       }
+       if(element.type==5){
+        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.imgUrl,id:element.id});
+       }
+      });
+    }
+   
+  })
+}
 
-  // const formData = new FormData();
+remove(id){
+  
+  this.http.httpGet(constants.homeBannnerDelete+"id="+id).subscribe((response) => {
+    
+    if (response.status == 200) {
+      this.getAllHomePageBanner();          
+    }
+  })
+}
+  uploadFileToActivity(file:any,type) {
+    
+var url=constants.bannerUpload
+switch (type) {
+  case 1:
+  url=constants.bannerUpload
+    break;
 
-  // for (let file of files)
-  //   formData.append(file.name, file);
+    case 2:
+    url=constants.bannerUpload
+      break;
 
+      case 3:
+      url=constants.bannerUpload
+        break;
 
+        case 4:
+        url=constants.bannerUpload
+          break;
+          case 5:
+          url=constants.galleryUpload
+            break;
+  default:
+    break;
+}
+
+    this.loader.display(true);
     let formData:FormData = new FormData();
     formData.append(file.name, file);
-    var result = this.http.upload(formData,constants.bannerUpload);
+    var result = this.http.upload(formData,url);
     result.subscribe((response) => {
-      debugger
+      
       if (response.status == 200) {
         debugger
-       
+        this.getAllHomePageBanner();      
+        this.loader.display(false);
+        this.imgURL=null;
        
       } else {
-     
+        debugger
+       // this.loader.display(false);
       }
 
     })
 
   }
+
+
+ 
 }
 export interface Tile {
   color: string;
   cols: number;
   rows: number;
   text: string;
-  url:string
+  url:string,
+  id:number
 }

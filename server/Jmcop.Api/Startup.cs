@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using Jmcop.IGenericRepository;
 using Jmcop.Models;
 using Jmcop.Repository;
+using Jmcop.Repository.Entity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -42,7 +44,7 @@ namespace Jmcop.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -60,5 +62,6 @@ namespace Jmcop.Api
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
           //  app.UseSwaggerUi();
         }
+      
     }
 }

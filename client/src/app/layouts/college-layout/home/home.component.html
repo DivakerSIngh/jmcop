@@ -2,33 +2,58 @@
 
  <div class="slider-area">
     <div class="preview-2">
-        <!-- <div id="nivoslider" class="slides">	
-            <img src="../../../../assets/img/college/slider/1.jpg" alt="" title="#slider-1-caption1"/>
-            <img src="../../../../assets/img/college/slider/2.jpg" alt="" title="#slider-1-caption2"/>
-        </div>  -->
-        <div class="slider-area">
-                <div class="preview-2">
-                    
-                    <div style="height: 400px;" id="nivoslider" class="slides">
-                        <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" >
-                            <div ngxSlickItem *ngFor="let slide of sliderData" class="slide">
-                                  <img src="{{slide.imgUrl}}" alt="" width="100%">
-                            </div>
-                        </ngx-slick>
-                      </div>
-                </div>
-            </div>
+     
+         
 
+            <ngx-slick-carousel class="carousel" 
+            #slickModal="slick-carousel" 
+            [config]="slideConfig" >
+<div ngxSlickItem *ngFor="let slide of sliderData" class="slide">
+  <img src="{{ slide.imgUrl }}" alt="" width="100%">
+</div>
+</ngx-slick-carousel>
 
-        <!-- <div style="height: 400px;" id="nivoslider" class="slides">
-            <ngx-slider [init]="slider" >
-             
-            </ngx-slider>
-          </div> -->
 
        
     </div>
 </div>
+<marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+  <h3 style="color:red;">New</h3> <p>Online Registration is coming soon</p>  
+    </marquee>
+<div class="course-area section-padding bg-white overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-wrapper">
+                        <div class="section-title">
+                            <h3>Overview</h3>                          
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    
+                <div class="col-sm-12">
+                    <div class="single-item">
+                        <div class="single-item-image overlay-effect">
+                           
+                        </div>
+                        <div class="single-item-text">
+                                <h4>WELCOME TO JAGMEET COLLEGE OF PHARMACY (JMCOP)</h4>
+
+                            
+                                <p>Jagmeet College of Pharmacy, located at Plot No. 41, Knowledge Park – III, Greater Noida ,as a part of the student’s centric services of Metro Group of Hospitals founded in 1997 by, Dr.Purshotam Lal (Padma Vibhushan, Padma Bhushan and Dr. B.C. Roy National Awardee), a pioneer of Interventional Cardiology in India, Metro Group of Hospitals is a group of 13 (2,500+ beds) flourishing hospitals, varied specialties situated in Delhi, Noida, Meerut, Haryana, Haridwar, Gurgaon, Gujarat and Rajasthan.</p>
+                                <p>Society of Metro Group for Education and Medical Research has initiated to established Metro College of Health Sciences & Research to impart Quality Education in area of Health Sciences, Metro College of Pharmacy is one of the wing which will offer different Pharmacy program to equip young students to develop a strong set of competencies desired in today’s cutting edge -competitive world.</p>
+                                <p>The Jagmeet College of Pharmacy is established in a 2.68 acres land with all infrastructure like Class Room, Laboratories, Machine Room, Instrumentation Room, Library, Play Ground, Cafeteria, Animal House and Herbal Garden etc. The Pharmacy College is affiliated to Dr.A.P.J.Abdul Kalam Technical University Lucknow and Board of Technical Education, Lucknow and approval by Pharmacy Council of India and All India Council for Technical Education & Ministry of HRD New Delhi. It is located amidst environment friendly and lush green educational hub of Greater Noida, by the side of 8- lane Noida - Greater Noida Express way is a sprawling and serene campus at a distance of about 30 minutes drive from New Delhi Border.</p>
+                               
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="course-area section-padding bg-white">
     <div class="container">
@@ -43,132 +68,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-sm-6">
+            <div class="col-sm-4 col-xs-12" *ngFor="let course of courseList">
                 <div class="single-item">
                     <div class="single-item-image overlay-effect">
-                        <a href="#"><img src="../../../../assets/img/college/course/1.jpg" alt=""></a>
+                        <a href="#"><img src="../../../../../assets/img/college/course/3.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
-                        <h4><a href="#">B.Pharma</a></h4>
-                        <!-- <div class="single-item-text-info">
-                            <span>By: <span>M S Nawaz</span></span>
-                            <span>Date: <span>20.5.15</span></span>
-                        </div> -->
-                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                        <h4><a >{{course.name}}</a></h4>
+                        <div class="single-item-text-info">
+                            <span>Available Seats: <span>{{course.seates}}</span></span>
+                            <span>Duration: <span>{{course.seates}}</span></span>
+                        </div>
+                        <p>{{course.description}}</p>
                        
                     </div>
                    
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="single-item">
-                    <div class="single-item-image overlay-effect">
-                        <a href="#"><img src="../../../../assets/img/college/course/2.jpg" alt=""></a>
-                    </div>
-                    <div class="single-item-text">
-                        <h4><a href="#">D.Pharma</a></h4>
-                        <!-- <div class="single-item-text-info">
-                            <span>By: <span>Subas Das</span></span>
-                            <span>Date: <span>20.5.15</span></span>
-                        </div> -->
-                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
-                         
-                    </div>
-                   
-                </div>
-            </div>
-           
-         
         </div>
     </div>
 </div>
 
-                <!-- <div class="latest-area section-padding bg-white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-title-wrapper">
-                                    <div class="section-title">
-                                        <h3>Our Library</h3>
-                                        <p>There are many variations of Library</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <a href="#"><img src="../../../../assets/img/college/libreary/1.JPG" alt=""></a>
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
-                                        <div class="single-item-comment-view">
-                                           <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                           <span><i class="zmdi zmdi-eye"></i>59</span>
-                                           <span><i class="zmdi zmdi-comments"></i>19</span>
-                                       </div>
-                                       <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                                       <a href="#" class="button-default">LEARN Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <a href="#"><img src="../../../../assets/img/college/libreary/2.JPG" alt=""></a>
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
-                                        <div class="single-item-comment-view">
-                                           <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                           <span><i class="zmdi zmdi-eye"></i>59</span>
-                                           <span><i class="zmdi zmdi-comments"></i>19</span>
-                                       </div>
-                                       <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                                       <a href="#" class="button-default">LEARN Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <a href="#"><img src="../../../../assets/img/college/latest/3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
-                                        <div class="single-item-comment-view">
-                                           <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                           <span><i class="zmdi zmdi-eye"></i>59</span>
-                                           <span><i class="zmdi zmdi-comments"></i>19</span>
-                                       </div>
-                                       <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                                       <a href="#" class="button-default">LEARN Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <a href="#"><img src="../../../../assets/img/college/latest/4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
-                                        <div class="single-item-comment-view">
-                                           <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                           <span><i class="zmdi zmdi-eye"></i>59</span>
-                                           <span><i class="zmdi zmdi-comments"></i>19</span>
-                                       </div>
-                                       <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                                       <a href="#" class="button-default">LEARN Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!--End of Latest News Area--> 
-                <!--Online Product Area Start-->
+             
                 <div class="product-area section-bottom-padding bg-white">
                     <div class="container">
                         <div class="row">
@@ -181,11 +102,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <marquee scrolldelay="200" behavior="alternate" width="80%"> </marquee> -->
                         <div class="row">
                             <div class="col-md-3 col-sm-4">
                                 <div class="single-product-item">
                                     <div class="single-product-image">
-                                        <a href="#"><img src="../../../../assets/img/college/libreary/1.JPG" alt=""></a>
+                                        <a href="#"><img src="http://res.cloudinary.com/divaker/image/upload/v1555757722/sample_id.jpg" alt=""></a>
                                     </div>
                                     <div class="single-product-text">
                                         <h4><a href="#">Book Store</a></h4>
@@ -197,7 +119,7 @@
                             <div class="col-md-3 col-sm-4">
                                 <div class="single-product-item">
                                     <div class="single-product-image">
-                                        <a href="#"><img src="../../../../assets/img/college/libreary/2.JPG" alt=""></a>
+                                        <a href="#"><img src="http://res.cloudinary.com/divaker/image/upload/v1555757722/sample_id.jpg" alt=""></a>
                                     </div>
                                     <div class="single-product-text">
                                         <h4><a href="#">Book Store</a></h4>
@@ -209,7 +131,7 @@
                             <div class="col-md-3 col-sm-4">
                                 <div class="single-product-item">
                                     <div class="single-product-image">
-                                        <a href="#"><img src="../../../../assets/img/college/libreary/3.JPG" alt=""></a>
+                                        <a href="#"><img src="http://res.cloudinary.com/divaker/image/upload/v1555757703/sample_id.jpg" alt=""></a>
                                     </div>
                                     <div class="single-product-text">
                                         <h4><a href="#">Book Store</a></h4>
@@ -218,10 +140,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 hidden-sm">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="single-product-item">
                                     <div class="single-product-image">
-                                        <a href="#"><img src="../../../../assets/img/college/libreary/4.JPG" alt=""></a>
+                                        <a href="#"><img src="http://res.cloudinary.com/divaker/image/upload/v1555757688/sample_id.jpg" alt=""></a>
                                     </div>
                                     <div class="single-product-text">
                                         <h4><a href="#">Book Store</a></h4>
@@ -230,7 +152,9 @@
                                     </div>
                                 </div>
                             </div>
+                       
                         </div>
+                   
                     </div>
                 </div>
                
@@ -239,10 +163,11 @@
                       <div class="row">
                           <div class="col-md-8">
                               <div class="about-container">
-                                  <h3>WHY EDUCAT ?</h3>
-                                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text
-      amr songr balga ami toami valo lasi ciri din akr dali</p>
-                                  <a class="button-default" href="#">Learn Now</a>	      
+                                  <h3>Overview</h3>
+                                  <p>
+                                        The Jagmeet College Of Pharmacy Is Established In A 2.68 Acres Land With All Infrastructure Like Class Room, Laboratories, Machine Room, Instrumentation Room, Library, Play Ground, Cafeteria, Animal House And Herbal Garden Etc. The Pharmacy College Is Affiliated To Dr.A.P.J.Abdul Kalam Technical University Lucknow And Board Of Technical Education, Lucknow And Approval By Pharmacy Council Of India And All India Council For Technical Education & Ministry Of HRD New Delhi. It Is Located Amidst Environment Friendly And Lush Green Educational Hub Of Greater Noida, By The Side Of 8- Lane Noida - Greater Noida Express Way Is A Sprawling And Serene Campus At A Distance Of About 30 Minutes Drive From New Delhi Border.
+                                  </p>
+                                 
                               </div>
                           </div>
                       </div>
@@ -267,18 +192,18 @@
                                 <div class="single-event-item">
                                     <div class="single-event-image">
                                         <a href="#">
-                                            <img src="../../../../assets/img/college/event/1.jpg" alt="">
+                                            <!-- <img src="../../../../assets/img/college/event/1.jpg" alt=""> -->
                                             <span><span>15</span>Jun</span>
                                         </a>
                                     </div>
                                     <div class="single-event-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
+                                        <h3><a href="#">A Report on 70th Indian Pharmaceutical Congress</a></h3>
                                         <div class="single-item-comment-view">
                                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
                                            <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
                                        </div>
                                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                                       <a class="button-default" href="#">LEARN Now</a>
+                                       <!-- <a class="button-default" href="#">LEARN Now</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -286,18 +211,18 @@
                                 <div class="single-event-item">
                                     <div class="single-event-image">
                                         <a href="#">
-                                            <img src="../../../../assets/img/college/event/2.jpg" alt="">
+                                            <!-- <img src="../../../../assets/img/college/event/2.jpg" alt=""> -->
                                             <span><span>20</span>Apr</span>
                                         </a>
                                     </div>
                                     <div class="single-event-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
+                                        <h3><a href="#">A Report on 70th Indian Pharmaceutical Congress</a></h3>
                                         <div class="single-item-comment-view">
                                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                                           <span><i class="zmdi zmdi-pin"></i>Jessore Bangladesh</span>
+                                           <span><i class="zmdi zmdi-pin"></i>Bijnor</span>
                                        </div>
                                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                                       <a class="button-default" href="#">LEARN Now</a>
+                                       <!-- <a class="button-default" href="#">LEARN Now</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -305,18 +230,18 @@
                                 <div class="single-event-item">
                                     <div class="single-event-image">
                                         <a href="#">
-                                            <img src="../../../../assets/img/college/event/3.jpg" alt="">
+                                            <!-- <img src="../../../../assets/img/college/event/3.jpg" alt=""> -->
                                             <span><span>06</span>Dec</span>
                                         </a>
                                     </div>
                                     <div class="single-event-text">
-                                        <h3><a href="#">Learn English in ease</a></h3>
+                                        <h3><a href="#">A Report on 70th Indian Pharmaceutical Congress</a></h3>
                                         <div class="single-item-comment-view">
                                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
                                            <span><i class="zmdi zmdi-pin"></i>Dhaka. Bangladesh</span>
                                        </div>
                                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                                       <a class="button-default" href="#">LEARN Now</a>
+                                       <!-- <a class="button-default" href="#">LEARN Now</a> -->
                                     </div>
                                 </div>
                             </div>

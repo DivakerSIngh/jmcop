@@ -16,9 +16,10 @@ namespace Jmcop.Repository
         public GenericRepository()
         {
             _dbContext = new DBEntity();
+            _dbContext.Database.Migrate();
            // _dbContext.Database.;
            // _dbContext.Database.EnsureCreated();
-          
+
 
         }
 

@@ -23,7 +23,7 @@ namespace Jmcop.Api.Controllers
         [Route("bannerimage")]
         public IActionResult GetHomeBanner()
         {
-            var lst = _banner.Get(x => x.Type== (int)BanneType.homeBanner).ToList();
+            var lst = _banner.List().ToList();
             if (lst!=null)
             {
                 var res = new ApiResponse()
@@ -40,6 +40,11 @@ namespace Jmcop.Api.Controllers
             }
 
         }
+
+      
+      
+
+        
         [HttpGet]
         [Route("courseimage")]
         public IActionResult GetCourseBanner()
@@ -124,5 +129,35 @@ namespace Jmcop.Api.Controllers
             }
 
         }
+
+
+        [HttpGet]
+        [Route("delete")]
+        public IActionResult Delete(int id)
+        {
+            var res = new ApiResponse();
+            var dom = _banner.GetById(id);
+            if (dom != null)
+            {
+                _banner.Delete(dom);
+                res = new ApiResponse()
+                {
+                    status = StatusCodes.Status200OK.ToString(),
+                    errorCode = StatusCodes.Status200OK,
+                    result = null
+                };
+            }
+            else {
+                res = new ApiResponse()
+                {
+                    status = StatusCodes.Status404NotFound.ToString(),
+                    errorCode = StatusCodes.Status404NotFound,
+                    result = "image Not found"
+                };
+            }
+            return Ok(res);
+          
+        }
+        
     }
 }

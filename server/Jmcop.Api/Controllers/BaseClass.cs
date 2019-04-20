@@ -12,7 +12,7 @@ namespace Jmcop.Api.Controllers
 {
    public class BaseClass
     {
-        public ImageUploadResult Upload(IFormFile file,string directory,int height=1300,int width=200)
+        public ImageUploadResult UploadAsync(IFormFile file,string directory,int height=1300,int width=200)
         {
             System.IO.Stream stream = file.OpenReadStream();
             var cloudinary = new Cloudinary(
@@ -23,21 +23,21 @@ namespace Jmcop.Api.Controllers
 
             var uploadParams = new ImageUploadParams()
             {
-                File = new FileDescription("testimage", stream),
+                File = new FileDescription("jmcop", stream),
                 PublicId = "sample_id",
-                Transformation = new Transformation().Crop("limit").Width(width).Height(height),
+                Transformation = new Transformation().Width(width).Height(height),// Crop("limit").Width(width).Height(height),
                 EagerTransforms = new List<Transformation>()
                       {
-                        new Transformation().Width(500).Height(200).Crop("thumb").Gravity("face").
+                        new Transformation().Width(width).Height(height).Crop("thumb").Gravity("face").
                           Radius(20).Effect("sepia"),
-                        new Transformation().Width(500).Height(150).Crop("fit").FetchFormat("png")
+                        new Transformation().Width(width).Height(height).Crop("fit").FetchFormat("png")
                       },
                 Tags = "special, for_homepage"
             };
 
-            var uploadResult = cloudinary.Upload(uploadParams);
+            return  cloudinary.UploadLarge(uploadParams);
            // uploadResult.JsonObj.Last
-            return uploadResult;
+           // return uploadResult;
         }
     }
 }

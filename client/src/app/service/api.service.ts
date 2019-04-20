@@ -61,28 +61,20 @@ export class ApiService {
 
 
 upload(formData:any,url) {
-  // if (files.length === 0)
-  //   return;
-
-  // const formData = new FormData();
-
-  // for (let file of files)
-  //   formData.append(file.name, file);
-
+  this.loader.display(true);
   const uploadReq = new HttpRequest('POST', environment.serverUrl + url, formData, {
-    reportProgress: true,
+    reportProgress: false,
   });
 
   return this.httpClient.request(uploadReq).pipe(
     map((resp: any) => {
       
       console.log("response", resp);
-      this.loader.display(false);
+     
       return resp;
 
     }), catchError( error => {
-      
-      this.loader.display(false);
+      this.loader.display(true);
       this.openSnackBar(error.message);
       console.log("createOrder error",error );
     return throwError("createOrder: " + error)

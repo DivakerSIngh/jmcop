@@ -1,5 +1,15 @@
 <div class="container">
- 
+        <div class="slider-area">
+                <div class="preview-2">
+                        <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let slide of sliderData" class="slide">
+              <img src="{{ slide.imgUrl }}" alt="" width="100%">
+            </div>
+            </ngx-slick-carousel>
+                </div>
+            </div>
         <ul class="breadcrumb">
             <li><a href="#">Gallery</a></li>
            
@@ -18,34 +28,15 @@
     <div class="container">
      
         <div class="row">
-            <div class="col-md-4 mb-30 col-sm-6">
+            <div class="col-md-4 mb-30 col-sm-6" *ngFor="let item of images">
                 <div class="gallery-img">
-                    <img src="../../../../../assets/img/college/event/1.jpg" alt="">
+                    <img [src]="item.imgUrl" onerror="this.src='../../../../../assets/img/banner-default.png'">
                     <div class="hover-effect">
-                        <h2>Educational Courses</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit maecenas luctus nunc</p>
+                        <h2>JMCOP College Photo</h2>
+                        <p>JMCOP Gallery</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-30 col-sm-6">
-                <div class="gallery-img">
-                    <img src="../../../../../assets/img/college/event/2.jpg" alt="">
-                    <div class="hover-effect">
-                        <h2>Educational Courses</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit maecenas luctus nunc</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-30 col-sm-6">
-                <div class="gallery-img">
-                    <img src="../../../../../assets/img/college/event/3.jpg" alt="">
-                    <div class="hover-effect">
-                        <h2>Educational Courses</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit maecenas luctus nunc</p>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
 </div>

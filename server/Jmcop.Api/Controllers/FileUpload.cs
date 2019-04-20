@@ -24,7 +24,8 @@ namespace Jmcop.Api.Controllers
             _banner = genericRepository;
         }
 
-        [HttpPost, DisableRequestSizeLimit]
+        [HttpPost]
+        [RequestSizeLimit(2147483648)]
         [Route("banner")]
         public IActionResult Banner()
         {
@@ -32,7 +33,7 @@ namespace Jmcop.Api.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var fileResult = new BaseClass().Upload(file, "banner", 1300, 200);
+                var fileResult = new BaseClass().UploadAsync(file, "banner", 300, 900);
 
                  banner = new Banner()
                 {
@@ -57,7 +58,7 @@ namespace Jmcop.Api.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var fileResult = new BaseClass().Upload(file, "banner", 500, 200);
+                var fileResult = new BaseClass().UploadAsync(file, "banner", 500, 200);
 
                 banner = new Banner()
                 {
@@ -75,6 +76,30 @@ namespace Jmcop.Api.Controllers
             return Ok(banner);
 
         }
+
+        [HttpPost]
+        [Route("faculty")]
+        public IActionResult Faculty()
+        {
+            var banner = new Banner();
+            try
+            {
+                var file = Request.Form.Files[0];
+                var fileResult = new BaseClass().UploadAsync(file, "faculty", 300, 100);
+                var res = new ApiResponse()
+                {
+                    status = StatusCodes.Status200OK.ToString(),
+                    errorCode = StatusCodes.Status200OK,
+                    result = fileResult.Uri.OriginalString
+                };
+                return Ok(res);
+            }
+            catch (System.Exception ex)
+            {
+                return Forbid();
+            }
+        }
+
         [HttpPost]
         [Route("library")]
         public IActionResult Library()
@@ -83,7 +108,7 @@ namespace Jmcop.Api.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var fileResult = new BaseClass().Upload(file, "library", 500, 200);
+                var fileResult = new BaseClass().UploadAsync(file, "library", 500, 200);
 
                 banner = new Banner()
                 {
@@ -110,7 +135,7 @@ namespace Jmcop.Api.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var fileResult = new BaseClass().Upload(file, "library", 500, 200);
+                var fileResult = new BaseClass().UploadAsync(file, "library", 500, 200);
 
                 banner = new Banner()
                 {
@@ -129,6 +154,7 @@ namespace Jmcop.Api.Controllers
 
         }
         [HttpPost]
+        [RequestSizeLimit(2147483648)]
         [Route("gallery")]
         public IActionResult Gallery()
         {
@@ -136,7 +162,10 @@ namespace Jmcop.Api.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var fileResult = new BaseClass().Upload(file, "library", 800, 300);
+
+               
+
+                var fileResult = new BaseClass().UploadAsync(file, "gallery", 200, 300);
 
                 banner = new Banner()
                 {

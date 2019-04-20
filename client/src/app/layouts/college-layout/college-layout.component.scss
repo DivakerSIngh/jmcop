@@ -23,10 +23,15 @@
 }
 
 .logomain{
-    height: 59px;
+    height: 71px;
     margin: -25px 0px 0px 0px;
+    width: 106px;
 }
 
 .menu-btn{
     border-bottom: 1px solid #2d3e50;
+}
+
+button.mat-button {
+    padding: 12px 16px 10px 15px !important;
 }

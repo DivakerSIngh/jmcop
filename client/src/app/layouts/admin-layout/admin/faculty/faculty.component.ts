@@ -12,14 +12,15 @@ import { LoaderService } from 'app/service/loader.service';
   styleUrls: ['./faculty.component.scss']
 })
 export class FacultyComponent implements OnInit {
-  
+  @ViewChild('fileInput') fileInput:any;
   pageMode='add'
   facultyList=[];
   length = 100;
   pageSize = 10;
   pageSizeOptions = [5, 10, 25, 100];
   pageNumber:number=0;
-
+  imgURL:any;
+  fileToUpload:any;
 
   frm = new FormGroup({
     //email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
@@ -27,15 +28,17 @@ export class FacultyComponent implements OnInit {
     designation: new FormControl('', [Validators.required]),
     qualification: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
-    id: new FormControl('')
+    id: new FormControl(''),
+    imgUrl:new  FormControl('')
 
   })
   constructor(private loader:LoaderService,  private elementRef: ElementRef,private snackBar:MatSnackBar, private router: Router, private http: ApiService) {
     this.getAll();
+    
   }
 
   ngOnInit() {
-
+    this.imgURL='../../../../../assets/img/defaut.png';
   }
   loadMore(evt){
 
@@ -52,9 +55,39 @@ this.pageSize=evt.pageSize;
       designation: req.designation,
       qualification:req.qualification,
       description: req.description,
+      imgUrl:req.imgUrl,
     })
   }
 
+  uploadAndPreview(files){
+    
+      if (files.length === 0)
+        return;
+        this.fileToUpload=files[0];
+      var mimeType = files[0].type;
+      if (mimeType.match(/image\/*/) == null) {
+       // this.message = "Only images are supported.";
+        return;
+      }
+      var reader = new FileReader();
+      reader.readAsDataURL(files[0]); 
+      reader.onload = (_event) => { 
+        this.imgURL = reader.result; 
+      }
+
+      let formData:FormData = new FormData();
+    formData.append(this.fileToUpload.name, this.fileToUpload);
+    this.loader.display(true);
+    var result = this.http.upload(formData,constants.facultyImage);
+    result.subscribe((response) => {
+      
+      if (response.status == 200 && response.body) {
+        this.imgURL=response.body.result;
+        this.loader.display(false);
+      }      
+    })
+    
+  }
   delete(req,id){
    
     this.http.httpPostLogin(constants.deleteFaculty, req).subscribe((response) => {
@@ -72,6 +105,7 @@ this.pageSize=evt.pageSize;
       var result = this.http.httpGet(constants.facultyList+"pageNumber="+this.pageNumber+"&pageSize="+this.pageSize);
       result.subscribe((response) => {
         if (response.status == 200) {
+          
           this.facultyList=response.result;
           this.length=response.pages;
         } else {
@@ -84,9 +118,11 @@ this.pageSize=evt.pageSize;
   
 
   submit(){
+    
     let index = this.frm.getRawValue().id
       if(index!="" && index != null) {
-        this.facultyList[index] = this.frm.value
+        this.facultyList[index] = this.frm.value;
+        this.frm.value.imgUrl=this.imgURL;
         this.http.httpPostLogin(constants.updateFaculty, this.frm.value).subscribe((response) => {
           if (response.status == 200) {
             this.getAll();
@@ -98,6 +134,7 @@ this.pageSize=evt.pageSize;
       } else {
         
           this.frm.value.id=0,
+          this.frm.value.imgUrl= this.imgURL,
         
         this.http.httpPostLogin(constants.addFaculty, this.frm.value).subscribe((response) => {
           if (response.status == 200) {
@@ -108,6 +145,7 @@ this.pageSize=evt.pageSize;
         })     
       }
       this.frm.reset();
+      this.imgURL='../../../../../assets/img/defaut.png';
     
       }
 }
