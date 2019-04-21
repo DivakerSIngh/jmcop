@@ -20,7 +20,13 @@ namespace Jmcop.Api.Controllers
             _genericRepository = genericRepository;
         }
 
-        
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok("Running");
+        }
+
+
         [HttpPost]
         public IActionResult Get([FromBody]User user)
         {

@@ -1,3 +1,83 @@
-<p>
-  index works!
-</p>
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+            <div class="col-sm-10">
+                <div class="card">
+                   
+                    <div class="card-body">
+                        <form (ngSubmit)="submit()" novalidate>
+                            <div class="row">
+                                
+                                <div class="col-sm-4">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Course Name"  #refName required  formControlName="name">
+                                    </mat-form-field>
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Available Sheat"  #refName required  formControlName="seates">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-sm-4">
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                   </mat-form-field>
+                                </div>
+                                <div class="col-sm-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                     </mat-form-field>
+                                  </div>
+                                  <div class="col-sm-4">
+                                      <mat-form-field class="example-full-width">
+                                          <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                       </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                         </mat-form-field>
+                                      </div>
+                                      <div class="col-sm-4">
+                                          <mat-form-field class="example-full-width">
+                                              <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                           </mat-form-field>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                             </mat-form-field>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <mat-form-field class="example-full-width">
+                                                  <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                               </mat-form-field>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <mat-form-field class="example-full-width">
+                                                    <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                                 </mat-form-field>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                  <mat-form-field class="example-full-width">
+                                                      <input matInput #refName required   formControlName="description" placeholder="sfsf sdf ">
+                                                   </mat-form-field>
+                                                </div>
+                            </div>
+                           
+                           
+                           
+                            <button mat-raised-button type="submit" *ngIf="pageMode=='add'"  [disabled]="frm.invalid" class="btn btn-danger pull-right">Save</button>
+                            <button mat-raised-button type="submit"  *ngIf="pageMode=='update'"  [disabled]="frm.invalid" class="btn btn-danger pull-right">Update</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+  </div>
+  

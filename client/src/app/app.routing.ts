@@ -62,12 +62,12 @@ const routes: Routes =[
       children: 
       [{path: '',loadChildren: './layouts/college-layout/academics/academics.module#AcademicsModule'}]
     },
-    // {
-    //   path: 'admission',
-    //   component: CollegeLayoutComponent,
-    //   children: 
-    //   [{path: '',loadChildren: './layouts/college-layout/about/about.module#AboutModule'}]
-    // },
+    {
+      path: 'admission',
+      component: CollegeLayoutComponent,
+      children: 
+      [{path: '',loadChildren: './layouts/college-layout/admission/admission.module#AdmissionModule'}]
+    },
     {
       path: 'gallery',
       component: CollegeLayoutComponent,
