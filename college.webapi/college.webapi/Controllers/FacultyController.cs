@@ -4,7 +4,7 @@ using System.Net;
 using System.Web.Http;
 using college.@interface;
 using college.models;
-using Jmcop.Models;
+using college.models;
 
 namespace college.webapi.Controllers
 {
@@ -32,7 +32,7 @@ namespace college.webapi.Controllers
             int TotalPages = (int)Math.Ceiling(count / (double)PageSize);
 
             // Returns List of Customer after applying Paging   
-            var items = lst.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+            var items = lst.OrderBy(x => x.Id).Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
 
             // if CurrentPage is greater than 1 means it has previousPage  
             var previousPage = CurrentPage > 1 ? "Yes" : "No";

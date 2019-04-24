@@ -1,4 +1,5 @@
-﻿using System;
+﻿using college.webapi.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,7 +19,8 @@ namespace college.webapi
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-           
+            GlobalConfiguration.Configuration.MessageHandlers.Add(new WepAPICrossHandler());
+
         }
     }
 }

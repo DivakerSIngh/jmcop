@@ -1,6 +1,6 @@
 using college.@interface;
 using college.models;
-using Jmcop.Models;
+using college.models;
 using System.Net;
 using System.Web.Http;
 

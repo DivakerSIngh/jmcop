@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using college.@interface;
 using college.models;
-using Jmcop.Models;
+
 
 namespace college.webapi.Controllers
 {

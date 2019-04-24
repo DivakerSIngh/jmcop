@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Jmcop.Models
+namespace college.models
 {
     public class ApiResponse
     {

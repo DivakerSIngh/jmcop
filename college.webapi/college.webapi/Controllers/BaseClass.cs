@@ -1,4 +1,4 @@
-using Jmcop.Models;
+using college.models;
 
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;

@@ -75,3 +75,5 @@ C:\angular4\JMCOP_Angular\college.webapi\college.webapi\obj\Release\college.weba
 C:\angular4\JMCOP_Angular\college.webapi\college.webapi\obj\Release\college.webapi.csproj.CopyComplete
 C:\angular4\JMCOP_Angular\college.webapi\college.webapi\obj\Release\college.webapi.dll
 C:\angular4\JMCOP_Angular\college.webapi\college.webapi\obj\Release\college.webapi.pdb
+C:\angular4\JMCOP_Angular\college.webapi\college.webapi\bin\Swashbuckle.Core.dll
+C:\angular4\JMCOP_Angular\college.webapi\college.webapi\bin\WebActivatorEx.dll
