@@ -7,7 +7,7 @@ namespace college.models
     public class ApiResponse
     {
         public string status { get; set; }
-        public int errorCode { get; set; }
+        public int code { get; set; }
         public object result { get; set; }
         public int pages { get; set; }
     }

@@ -49,7 +49,7 @@ login() {
     }
     var result = this.http.httpPostLogin(constants.loginUrl, loginData);
     result.subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         
         localStorage.setItem('userDetails',JSON.stringify(response.result));
         localStorage.setItem('name', response.result.name);

@@ -29,7 +29,7 @@ export class IndexComponent implements OnInit {
   GalleryImages(){
 
     this._apiService.httpGet(constants.getallBanner).subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.images=response.result.filter(x=>x.type==5);
         this.sliderData= this.images;
       }

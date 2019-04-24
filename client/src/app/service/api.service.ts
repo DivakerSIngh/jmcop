@@ -20,6 +20,7 @@ export class ApiService {
   getHeader() {
     const header = {
       'Content-Type':  'application/json',
+      'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ==',
         'authtoken': localStorage.getItem('auth-token')
       };
@@ -32,13 +33,15 @@ export class ApiService {
   httpPostLogin(url, obj) {
     debugger
     this.loader.display(true);
-    const header = {
-      'Content-Type':  'application/json',
+    const headeroption = {
+      headers:new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ=='
-        
+      })             
       };
-      var httpOptions = new HttpHeaders(header);
-    return this.httpClient.post(environment.serverUrl + url, obj, {headers : httpOptions})
+     
+    return this.httpClient.post(environment.serverUrl + url, obj, headeroption)
     .pipe(
       map((resp: any) => {
         
@@ -97,6 +100,7 @@ postFile(url,file:any) {
    // 'Accept': 'application/json',
      //'Content-Type': "multipart/form-data",
     'Content-Type':'application/x-www-form-urlencoded',
+    'Access-Control-Allow-Origin':'*',
     'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ=='
       // 'authtoken': localStorage.getItem('token')
     };
@@ -125,6 +129,7 @@ postFile(url,file:any) {
     this.loader.display(true);
     const header = {
       'Content-Type':  'application/json',
+      'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ==',
         'authtoken': localStorage.getItem('token')
       };
@@ -156,6 +161,7 @@ postFile(url,file:any) {
     this.loader.display(true);
     const header = {
       'Content-Type':  'application/json',
+      'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ==',
         'authtoken': localStorage.getItem('token')        
       };

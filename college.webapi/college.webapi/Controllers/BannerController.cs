@@ -30,7 +30,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode =(int) HttpStatusCode.OK,
+                    code =(int) HttpStatusCode.OK,
                     result = lst
                 };
                 return Ok(res);
@@ -56,7 +56,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode =(int) HttpStatusCode.OK,
+                    code =(int) HttpStatusCode.OK,
                     result = lst
                 };
                 return Ok(res);
@@ -77,7 +77,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode = (int)HttpStatusCode.OK,
+                    code = (int)HttpStatusCode.OK,
                     result = lst
                 };
                 return Ok(res);
@@ -98,7 +98,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode = (int)HttpStatusCode.OK,
+                    code = (int)HttpStatusCode.OK,
                     result = lst
                 };
                 return Ok(res);
@@ -119,7 +119,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode = (int)HttpStatusCode.OK,
+                    code = (int)HttpStatusCode.OK,
                     result = lst
                 };
                 return Ok(res);
@@ -144,7 +144,7 @@ namespace college.webapi.Controllers
                 res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode = (int)HttpStatusCode.OK,
+                    code = (int)HttpStatusCode.OK,
                     result = null
                 };
             }
@@ -152,7 +152,7 @@ namespace college.webapi.Controllers
                 res = new ApiResponse()
                 {
                     status = HttpStatusCode.NotFound.ToString(),
-                    errorCode = (int)HttpStatusCode.NotFound,
+                    code = (int)HttpStatusCode.NotFound,
                     result = "image Not found"
                 };
             }

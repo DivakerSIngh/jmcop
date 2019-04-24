@@ -57,7 +57,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                     errorCode =(int) HttpStatusCode.OK,
+                     code =(int) HttpStatusCode.OK,
                     result = items,
                     pages= count
                 };
@@ -81,7 +81,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                     errorCode =(int) HttpStatusCode.OK,
+                     code =(int) HttpStatusCode.OK,
                     result = null
                 };
                 return Ok(res);
@@ -105,7 +105,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                     errorCode =(int) HttpStatusCode.OK,
+                     code =(int) HttpStatusCode.OK,
                     result = null
                 };
                 return Ok(res);
@@ -128,7 +128,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                     errorCode =(int) HttpStatusCode.OK,
+                     code =(int) HttpStatusCode.OK,
                     result = null
                 };
                 return Ok(res);

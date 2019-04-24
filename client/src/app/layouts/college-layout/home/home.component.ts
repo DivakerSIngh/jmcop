@@ -33,22 +33,24 @@ export class HomeComponent implements OnInit {
   myarray=[];
   GetHomeBanner(){
     this._apiService.httpGet(constants.getallBanner).subscribe((response) => {
-      if (response.status == 200) {
-        this.sliderData=response.result.filter(x=>x.type==1);
+      
+      if (response.code == 200) {
+        this.sliderData=response.result.filter(x=>x.Type==1);
+        
       }
     })
   }
   getCourse(){
-    debugger
+    
     this._apiService.httpGet(constants.getAllCourse+"pageNumber=0&pageSize=100").subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.courseList=response.result;
       }
     })
   }
   getEvents(){
     this._apiService.httpGet(constants.getAllCourse).subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.courseList=response.result;
       }
     })

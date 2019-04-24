@@ -34,7 +34,7 @@ namespace college.webapi.Controllers
                 var res = new ApiResponse()
                 {
                     status = HttpStatusCode.OK.ToString(),
-                    errorCode = (int)HttpStatusCode.OK,
+                    code = (int)HttpStatusCode.OK,
                     result = dom
                 };
                 return Ok(res);

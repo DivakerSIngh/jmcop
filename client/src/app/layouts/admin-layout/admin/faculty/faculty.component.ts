@@ -81,7 +81,7 @@ this.pageSize=evt.pageSize;
     var result = this.http.upload(formData,constants.facultyImage);
     result.subscribe((response) => {
       
-      if (response.status == 200 && response.body) {
+      if (response.code ==200 && response.body) {
         this.imgURL=response.body.result;
         this.loader.display(false);
       }      
@@ -91,7 +91,7 @@ this.pageSize=evt.pageSize;
   delete(req,id){
    
     this.http.httpPostLogin(constants.deleteFaculty, req).subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.getAll();
       } else {
      
@@ -104,7 +104,7 @@ this.pageSize=evt.pageSize;
   getAll(){
       var result = this.http.httpGet(constants.facultyList+"pageNumber="+this.pageNumber+"&pageSize="+this.pageSize);
       result.subscribe((response) => {
-        if (response.status == 200) {
+        if (response.code ==200) {
           
           this.facultyList=response.result;
           this.length=response.pages;
@@ -124,7 +124,7 @@ this.pageSize=evt.pageSize;
         this.facultyList[index] = this.frm.value;
         this.frm.value.imgUrl=this.imgURL;
         this.http.httpPostLogin(constants.updateFaculty, this.frm.value).subscribe((response) => {
-          if (response.status == 200) {
+          if (response.code ==200) {
             this.getAll();
             this.pageMode='add';
           } else {
@@ -137,7 +137,7 @@ this.pageSize=evt.pageSize;
           this.frm.value.imgUrl= this.imgURL,
         
         this.http.httpPostLogin(constants.addFaculty, this.frm.value).subscribe((response) => {
-          if (response.status == 200) {
+          if (response.code ==200) {
             this.getAll();
           } else {
         

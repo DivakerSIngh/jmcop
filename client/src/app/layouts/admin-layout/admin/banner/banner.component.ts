@@ -66,7 +66,7 @@ getAllHomePageBanner(){
   this.http.httpGet(constants.getallBanner).subscribe((response) => {
     this.tiles=[];
     this.gallery=[];
-    if (response.status == 200) {
+    if (response.code ==200) {
      this.bannerAllImages=response.result;
      this.bannerAllImages.forEach(element => {
        if(element.type==1){
@@ -85,7 +85,7 @@ remove(id){
   
   this.http.httpGet(constants.homeBannnerDelete+"id="+id).subscribe((response) => {
     
-    if (response.status == 200) {
+    if (response.code ==200) {
       this.getAllHomePageBanner();          
     }
   })
@@ -122,7 +122,7 @@ switch (type) {
     var result = this.http.upload(formData,url);
     result.subscribe((response) => {
       
-      if (response.status == 200) {
+      if (response.code ==200) {
         debugger
         this.getAllHomePageBanner();      
         this.loader.display(false);

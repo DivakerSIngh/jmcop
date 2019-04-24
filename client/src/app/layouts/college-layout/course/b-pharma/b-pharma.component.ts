@@ -19,7 +19,7 @@ export class BPharmaComponent implements OnInit {
   }
   getCourse(){
     this._apiService.httpGet(constants.getAllCourse+"pageNumber=0&pageSize=100").subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.courseList=response.result;
       }
     })

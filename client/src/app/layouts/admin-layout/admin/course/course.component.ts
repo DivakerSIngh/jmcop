@@ -51,7 +51,7 @@ export class CourseComponent implements OnInit {
 
   delete(req,id){
     this.http.httpPostLogin(constants.deleteCourse, req).subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.getAll();
       } else {
      
@@ -71,7 +71,7 @@ export class CourseComponent implements OnInit {
   getAll(){
       var result = this.http.httpGet(constants.getAllCourse+"pageNumber="+this.pageNumber+"&pageSize="+this.pageSize);
       result.subscribe((response) => {
-        if (response.status == 200) {
+        if (response.code ==200) {
           this.courseList=response.result;
           this.length=response.pages;
         } else {
@@ -86,7 +86,7 @@ let index = this.frm.getRawValue().id
   if(index!="" && index != null) {
     this.courseList[index] = this.frm.value
     this.http.httpPostLogin(constants.updateCourse, this.frm.value).subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.getAll();
         this.pageMode='add';
       } else {
@@ -98,7 +98,7 @@ let index = this.frm.getRawValue().id
       this.frm.value.id=0,
     
     this.http.httpPostLogin(constants.addCourse, this.frm.value).subscribe((response) => {
-      if (response.status == 200) {
+      if (response.code ==200) {
         this.getAll();
       } else {
     
