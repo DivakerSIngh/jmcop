@@ -4,3 +4,9 @@ D:\FreelanceProject\JMCOP_Project\Project\college.webapi\college.interface\obj\D
 D:\FreelanceProject\JMCOP_Project\Project\college.webapi\college.interface\obj\Debug\college.interface.csproj.CoreCompileInputs.cache
 D:\FreelanceProject\JMCOP_Project\Project\college.webapi\college.interface\obj\Debug\college.@interface.dll
 D:\FreelanceProject\JMCOP_Project\Project\college.webapi\college.interface\obj\Debug\college.@interface.pdb
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\bin\Debug\college.@interface.dll
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\bin\Debug\college.@interface.pdb
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.interface.csproj.CoreCompileInputs.cache
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.@interface.dll
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.@interface.pdb
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.interface.csprojAssemblyReference.cache

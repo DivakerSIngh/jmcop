@@ -27,6 +27,15 @@ namespace college.entity
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
+            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<Course>().ToTable("Course");
+            modelBuilder.Entity<Banner>().ToTable("Banner");
+            modelBuilder.Entity<Library>().ToTable("Library");
+            modelBuilder.Entity<Gallery>().ToTable("Gallery");
+            modelBuilder.Entity<Faculty>().ToTable("Faculty");
+            modelBuilder.Entity<Events>().ToTable("Events");
+            modelBuilder.Entity<Department>().ToTable("Department");
+            modelBuilder.Entity<Facility>().ToTable("Facility");
         }
       
 

@@ -1,0 +1,5 @@
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\bin\Release\college.@interface.dll
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\bin\Release\college.@interface.pdb
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Release\college.interface.csproj.CoreCompileInputs.cache
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Release\college.@interface.dll
+C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Release\college.@interface.pdb

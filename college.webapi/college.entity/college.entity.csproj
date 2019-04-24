@@ -32,9 +32,11 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -64,9 +66,9 @@
   <ItemGroup>
     <Compile Include="DBEntity.cs" />
     <Compile Include="GenericEntity.cs" />
-    <Compile Include="Migrations\201904211741297_newone2.cs" />
-    <Compile Include="Migrations\201904211741297_newone2.Designer.cs">
-      <DependentUpon>201904211741297_newone2.cs</DependentUpon>
+    <Compile Include="Migrations\201904221231057_initial.cs" />
+    <Compile Include="Migrations\201904221231057_initial.Designer.cs">
+      <DependentUpon>201904221231057_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,8 +102,8 @@
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904211741297_newone2.resx">
-      <DependentUpon>201904211741297_newone2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904221231057_initial.resx">
+      <DependentUpon>201904221231057_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

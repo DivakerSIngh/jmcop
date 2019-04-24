@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Dependencies;
 using Unity;
 
@@ -18,7 +19,10 @@ namespace college.webapi
             var container = new UnityContainer();
             container.RegisterType(typeof(IGeneric<>), typeof(GenericEntity<>));
             config.DependencyResolver = new UnityResolver(container);
-            config.EnableCors();
+            //#region enable cors
+            //EnableCorsAttribute cors = new EnableCorsAttribute("http://localhost:80", "*", "GET,POST");
+            //config.EnableCors(cors);
+            //#endregion
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
