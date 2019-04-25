@@ -9,7 +9,7 @@ namespace college.webapi.Controllers
 {
 
     
-          [RoutePrefix("FileUpload")]
+         [RoutePrefix("api/fileUpload")]
     public class FileUploadController : ApiController
     {
 
