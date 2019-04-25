@@ -72,6 +72,7 @@ namespace college.webapi.Controllers
 
         }
 
+     
         [HttpPost]
         [Route("faculty")]
         public IHttpActionResult Faculty()
@@ -91,7 +92,13 @@ namespace college.webapi.Controllers
             }
             catch (System.Exception ex)
             {
-                return BadRequest();
+                var res = new ApiResponse()
+                {
+                    status = HttpStatusCode.BadRequest.ToString(),
+                    code = (int)HttpStatusCode.BadRequest,
+                    result = ex.Message
+                };
+                return BadRequest(ex.Message);
             }
         }
 
@@ -164,6 +171,33 @@ namespace college.webapi.Controllers
                     ImgUrl = fileResult.Uri.OriginalString,
                     Status = true,
                     Type =(int) BanneType.gallery
+                };
+                _banner.Add(banner);
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest();
+            }
+
+            return Ok(banner);
+
+        }
+
+        [HttpPost]
+        [Route("about")]
+        public IHttpActionResult About()
+        {
+            var banner = new Banner();
+            try
+            {
+                var file = System.Web.HttpContext.Current.Request;
+                var fileResult = new BaseClass().UploadAsync(file.Files, "about", 200, 300);
+
+                banner = new Banner()
+                {
+                    ImgUrl = fileResult.Uri.OriginalString,
+                    Status = true,
+                    Type = (int)BanneType.about
                 };
                 _banner.Add(banner);
             }

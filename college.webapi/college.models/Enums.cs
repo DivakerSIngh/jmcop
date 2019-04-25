@@ -11,7 +11,8 @@ namespace college.models
         course = 2,
         library = 3,
         events = 4,
-        gallery = 5
+        gallery = 5,
+        about = 6
 
     }
 }

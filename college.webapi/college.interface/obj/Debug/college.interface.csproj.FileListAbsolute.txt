@@ -10,3 +10,9 @@ C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.int
 C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.@interface.dll
 C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.@interface.pdb
 C:\angular4\JMCOP_Angular\college.webapi\college.interface\obj\Debug\college.interface.csprojAssemblyReference.cache
+C:\angular4\api\college.interface\bin\Debug\college.@interface.dll
+C:\angular4\api\college.interface\bin\Debug\college.@interface.pdb
+C:\angular4\api\college.interface\obj\Debug\college.interface.csprojAssemblyReference.cache
+C:\angular4\api\college.interface\obj\Debug\college.interface.csproj.CoreCompileInputs.cache
+C:\angular4\api\college.interface\obj\Debug\college.@interface.dll
+C:\angular4\api\college.interface\obj\Debug\college.@interface.pdb
