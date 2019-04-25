@@ -7,7 +7,7 @@ export const environment = {
   production: false,
   //serverUrl :"http://localhost:50611/api/"
 
-  serverUrl:"http://api.cpcc.in/api/"
+  serverUrl:"http://api.jmcop.org/api/"
 
 
 };
