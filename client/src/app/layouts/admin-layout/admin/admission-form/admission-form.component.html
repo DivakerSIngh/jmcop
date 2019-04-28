@@ -1,0 +1,159 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+              <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Home Page:</span>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                   
+                                    <li class="nav-item">
+                                        <a mat-button class="nav-link active" href="#admission" data-toggle="tab">
+                                            <i class="material-icons">event</i> Online Submitted Admission Form
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a mat-button class="nav-link" href="#setting" data-toggle="tab">
+                                            <i class="material-icons">event</i> Event
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                           
+                            <div class="tab-pane active" id="admission">
+                                <table class="table">
+                                    <tbody>
+                                        <tr *ngFor="let item of lst let i = index" [attr.data-index]="i">
+                                            <td>
+                                               {{i+1}}
+                                            </td>
+                                           
+                                            <td>
+                                               {{item.RegistrationNumber}}
+                                            </td>
+                                            <td>
+                                                    {{item.CandidateName}}
+                                            </td>
+                                            <td>
+                                                    {{item.Mobile}}
+                                            </td>
+                                            <td>
+                                                {{item.CourseType==1?'B.Pharma':'D.Pharma'}}
+                                        </td>
+                                            
+                                           
+                                            <td class="td-actions">
+                                              <button mat-raised-button type="button" matTooltip="Edit Task"  [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                  <i class="material-icons">edit</i>
+                                              </button>
+                                              <button mat-raised-button type="button" matTooltip="Remove"  [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                                  <i class="material-icons">close</i>
+                                              </button>
+                                          </td>
+                                        </tr>
+                                       
+                                       
+                                       
+                                     
+                                    </tbody>
+                                </table>
+                                <div class="pager-botom">
+                                    <mat-paginator [length]="length"
+                                    [pageSize]="pageSize"
+                                    [pageIndex]="pageIndex"
+                                    [pageSizeOptions]="pageSizeOptions"
+                                    (page)="loadMore($event)">
+                      </mat-paginator>
+                             </div>
+                                      
+                            </div>
+  
+                            <div class="tab-pane" id="setting">
+                                  <table class="table">
+                                      <tbody>
+                                          <tr>
+                                              <td>
+                                                  <div class="form-check">
+                                                      <label class="form-check-label">
+                                                          <input class="form-check-input" type="checkbox" value="">
+                                                          <span class="form-check-sign">
+                                                              <span class="check"></span>
+                                                          </span>
+                                                      </label>
+                                                  </div>
+                                              </td>
+                                              <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                              <td class="td-actions text-right">
+                                                  <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                      <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                                      <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>
+                                                  <div class="form-check">
+                                                      <label class="form-check-label">
+                                                          <input class="form-check-input" type="checkbox" value="" checked>
+                                                          <span class="form-check-sign">
+                                                              <span class="check"></span>
+                                                          </span>
+                                                      </label>
+                                                  </div>
+                                              </td>
+                                              <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                              </td>
+                                              <td class="td-actions text-right">
+                                                  <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                      <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                                      <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>
+                                                  <div class="form-check">
+                                                      <label class="form-check-label">
+                                                          <input class="form-check-input" type="checkbox" value="" checked>
+                                                          <span class="form-check-sign">
+                                                              <span class="check"></span>
+                                                          </span>
+                                                      </label>
+                                                  </div>
+                                              </td>
+                                              <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                              <td class="td-actions text-right">
+                                                  <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                      <i class="material-icons">edit</i>
+                                                  </button>
+                                                  <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                                      <i class="material-icons">close</i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+  </div>
+  
+  </div>
+  </div>
+  </div>

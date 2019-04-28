@@ -12,7 +12,7 @@ namespace college.entity
     public partial class DBEntity : DbContext
     {
 
-        public DBEntity() : base("name=collegeEntity") { }
+        public DBEntity() : base("name=collegeentity") { }
 
         public virtual DbSet<AdminUser> AdminUser { get; set; }
         public virtual DbSet<Course> Course { get; set; }

@@ -27,6 +27,8 @@ import {
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { AdmissionFormComponent } from './admin/admission-form/admission-form.component';
+import { StudentFormComponent } from './admin/student-form/student-form.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -61,7 +63,9 @@ import { HttpModule } from '@angular/http';
     FacultyComponent,
     BannerComponent,
     CourseComponent,
-    AcademicsComponent
+    AcademicsComponent,
+    AdmissionFormComponent,
+    StudentFormComponent
   ]
 })
 

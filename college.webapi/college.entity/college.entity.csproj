@@ -66,9 +66,9 @@
   <ItemGroup>
     <Compile Include="DBEntity.cs" />
     <Compile Include="GenericEntity.cs" />
-    <Compile Include="Migrations\201904271532015_newtables.cs" />
-    <Compile Include="Migrations\201904271532015_newtables.Designer.cs">
-      <DependentUpon>201904271532015_newtables.cs</DependentUpon>
+    <Compile Include="Migrations\201904281316536_newdb.cs" />
+    <Compile Include="Migrations\201904281316536_newdb.Designer.cs">
+      <DependentUpon>201904281316536_newdb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +102,8 @@
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904271532015_newtables.resx">
-      <DependentUpon>201904271532015_newtables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904281316536_newdb.resx">
+      <DependentUpon>201904281316536_newdb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

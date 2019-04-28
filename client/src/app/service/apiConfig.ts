@@ -13,6 +13,7 @@
   export const updateFaculty: string = 'faculty/update';
   export const deleteFaculty: string = 'faculty/delete';
   export const facultyList: string = 'faculty/getall?';
+  
 
   export const getallBanner: string = 'banner/bannerimage';
   
@@ -21,5 +22,8 @@
   export const deleteCourse: string = 'course/delete';
   export const addCourse: string = 'course/add';
   export const updateCourse: string = 'course/update';
+
+  export const admisionForm: string = 'admission/postform';
+  export const studentFormList: string = 'admission/getall?';
 
   

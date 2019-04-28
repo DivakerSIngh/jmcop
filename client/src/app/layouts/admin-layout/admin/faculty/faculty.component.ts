@@ -35,7 +35,6 @@ export class FacultyComponent implements OnInit {
   })
   constructor(private loader:LoaderService,  private elementRef: ElementRef,private snackBar:MatSnackBar, private router: Router, private http: ApiService) {
     this.getAll();
-    
   }
 
   ngOnInit() {

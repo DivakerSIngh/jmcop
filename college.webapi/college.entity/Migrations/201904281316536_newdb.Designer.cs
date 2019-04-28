@@ -7,13 +7,13 @@ namespace college.entity.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class newtables : IMigrationMetadata
+    public sealed partial class newdb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(newtables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newdb));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904271532015_newtables"; }
+            get { return "201904281316536_newdb"; }
         }
         
         string IMigrationMetadata.Source

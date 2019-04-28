@@ -33,5 +33,12 @@ namespace college.models
         [Required]
         public string City { get; set; }
 
+        [Required]
+        public int CourseType { get; set; }
+
+        [Required]
+        public int RegistrationNumber { get; set; }
+
+
     }
 }

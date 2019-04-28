@@ -12,6 +12,8 @@ import { FacultyComponent } from '../admin-layout/admin/faculty/faculty.componen
 import { BannerComponent } from '../admin-layout/admin/banner/banner.component';
 import { CourseComponent } from '../admin-layout/admin/course/course.component';
 import { AcademicsComponent } from '../admin-layout/admin/academics/academics.component';
+import { AdmissionFormComponent } from './admin/admission-form/admission-form.component';
+import { StudentFormComponent } from './admin/student-form/student-form.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -25,7 +27,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'homemanagement',        component: BannerComponent },
     { path: 'faculty',        component: FacultyComponent },
     { path: 'academics',        component: AcademicsComponent },
-    
-    
-      
+    { path: 'admisisonform',        component: AdmissionFormComponent },
+    {
+        path: 'admisisonform/:id',
+        component: StudentFormComponent
+       
+      },
 ];

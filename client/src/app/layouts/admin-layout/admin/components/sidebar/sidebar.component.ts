@@ -14,6 +14,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/admin/homemanagement', title: 'Home Managment',  icon:'notifications', class: '' },
     { path: '/admin/course', title: 'Course Managment',  icon:'content_paste', class: '' },    
     { path: '/admin/academics', title: 'Academics',  icon:'content_paste', class: '' },    
+    { path: '/admin/admisisonform', title: 'Admision',  icon:'content_paste', class: '' }, 
     
     // { path: '/admin/dashboard1', title: 'Dashboard',  icon: 'dashboard', class: '' },
     // { path: '/admin/user-profile', title: 'Profile',  icon:'person', class: '' },
