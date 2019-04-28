@@ -35,10 +35,11 @@ namespace college.entity
                    .AsEnumerable();
         }
 
-        public void Add(T entity)
+        public T Add(T entity)
         {
             _dbContext.Set<T>().Add(entity);
             _dbContext.SaveChanges();
+            return entity;
         }
 
         public void Update(T entity)
@@ -60,6 +61,11 @@ namespace college.entity
                    .AsEnumerable();
         }
 
-      
+        public List<T> BulkAdd(List<T> entity)
+        {
+            _dbContext.Set<T>().AddRange(entity);
+            _dbContext.SaveChanges();
+            return entity;
+        }
     }
 }

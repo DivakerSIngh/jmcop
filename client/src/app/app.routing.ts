@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CollegeLayoutComponent } from './layouts/college-layout/college-layout.component';
 import { LoginComponent } from './account/login/login.component';
+import { LoginAuthGuard } from './service/login-auth-guard';
+import { AuthGuard } from './service/auth-guard.service';
 
 
 const routes: Routes =[
@@ -44,18 +46,7 @@ const routes: Routes =[
       children: 
       [{path: '',loadChildren: './layouts/college-layout/faculty/faculty.module#FacultyModule'}]
     },
-    // {
-    //   path: 'facility',
-    //   component: CollegeLayoutComponent,
-    //   children: 
-    //   [{path: '',loadChildren: './layouts/college-layout/about/about.module#AboutModule'}]
-    // },
-    // {
-    //   path: 'admission',
-    //   component: CollegeLayoutComponent,
-    //   children: 
-    //   [{path: '',loadChildren: './layouts/college-layout/about/about.module#AboutModule'}]
-    // },
+
      {
       path: 'academics',
       component: CollegeLayoutComponent,
@@ -84,8 +75,8 @@ const routes: Routes =[
     },
 
   
-  {path: 'login',component: LoginComponent},
-  {path: 'admin',component: AdminLayoutComponent,children: [{path: '',loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]}
+  {path: 'login',component: LoginComponent,canActivate: [LoginAuthGuard] },
+  {path: 'admin',component: AdminLayoutComponent,canActivate: [AuthGuard] ,   children: [{path: '',loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]}
 ];
 
 @NgModule({

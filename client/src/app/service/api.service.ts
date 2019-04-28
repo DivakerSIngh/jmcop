@@ -12,7 +12,9 @@ import { MatSnackBar } from '@angular/material';
   providedIn: 'root'
 })
 export class ApiService {
-
+apiBaseUrl:string="http://api.jmcop.org:80/api/";
+//apiBaseUrl:string='http://localhost:50611/api/';
+token:any;
   constructor(private httpClient: HttpClient,private loader:LoaderService,private snackBar:MatSnackBar) {
   }
 
@@ -22,7 +24,7 @@ export class ApiService {
       'Content-Type':  'application/json',
       'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ==',
-        'authtoken': localStorage.getItem('auth-token')
+       
       };
       const httpOptions = new HttpHeaders(header);
 
@@ -41,7 +43,7 @@ export class ApiService {
       })             
       };
      
-    return this.httpClient.post(environment.serverUrl + url, obj, headeroption)
+    return this.httpClient.post(this.apiBaseUrl + url, obj, headeroption)
     .pipe(
       map((resp: any) => {
         
@@ -65,7 +67,7 @@ export class ApiService {
 
 upload(formData:any,url) {
   this.loader.display(true);
-  const uploadReq = new HttpRequest('POST', environment.serverUrl + url, formData, {
+  const uploadReq = new HttpRequest('POST', this.apiBaseUrl + url, formData, {
     reportProgress: false,
   });
 
@@ -97,15 +99,13 @@ upload(formData:any,url) {
 postFile(url,file:any) {
   this.loader.display(true);
   const header = {
-   // 'Accept': 'application/json',
-     //'Content-Type': "multipart/form-data",
+  
     'Content-Type':'application/x-www-form-urlencoded',
     'Access-Control-Allow-Origin':'*',
     'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ=='
-      // 'authtoken': localStorage.getItem('token')
     };
     var httpOptions = new HttpHeaders(header);
-  return this.httpClient.post(environment.serverUrl + url, file, {headers : httpOptions})
+  return this.httpClient.post(this.apiBaseUrl + url, file, {headers : httpOptions})
   .pipe(
     map((resp: any) => {
       
@@ -131,10 +131,9 @@ postFile(url,file:any) {
       'Content-Type':  'application/json',
       'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ==',
-        'authtoken': localStorage.getItem('token')
       };
       var httpOptions = new HttpHeaders(header);
-    return this.httpClient.post(environment.serverUrl + url, obj, {headers : httpOptions})
+    return this.httpClient.post(this.apiBaseUrl + url, obj, {headers : httpOptions})
     .pipe(
       map((resp: any) => {
         
@@ -163,10 +162,10 @@ postFile(url,file:any) {
       'Content-Type':  'application/json',
       'Access-Control-Allow-Origin':'*',
         'Authorization': 'Basic YWRtaW5AYnJvd3NlcmFwcC5jb206UGFzc0B3b3JkMQ==',
-        'authtoken': localStorage.getItem('token')        
+          
       };
       var httpOptions = new HttpHeaders(header);
-    return this.httpClient.get(environment.serverUrl + url, {headers : httpOptions})
+    return this.httpClient.get(this.apiBaseUrl + url, {headers : httpOptions})
     .pipe(
       map((resp: any) => {
         this.loader.display(false);

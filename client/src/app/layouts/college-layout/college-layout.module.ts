@@ -8,12 +8,7 @@ import { SliderModule } from 'ngx-slider';
 import { OwlModule } from 'ngx-owl-carousel';
 import { SlickModule } from 'ngx-slick';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-
-
-
-
-
-//import { CollegeLayoutComponent } from './college-layout.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @NgModule({
   imports: [

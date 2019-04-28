@@ -16,16 +16,12 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CollegeLayoutComponent } from './layouts/college-layout/college-layout.component';
+import {  NavMenuComponent} from './layouts/college-layout/nav-menu/nav-menu.component';
 import { LoginComponent } from './account/login/login.component';
 import { ForgotPasswordComponent } from './account/forgot-password/forgot-password.component';
 import { MatButtonModule,MatRippleModule,MatFormFieldModule,MatInputModule , MatMenuModule, MatSnackBarModule,  MatProgressSpinnerModule } from '@angular/material';
-
-
-
-
-
-
-
+import { AuthGuard } from './service/auth-guard.service';
+import { LoginAuthGuard } from './service/login-auth-guard';
 
 @NgModule({
   imports: [
@@ -53,11 +49,12 @@ import { MatButtonModule,MatRippleModule,MatFormFieldModule,MatInputModule , Mat
     AdminLayoutComponent,
     CollegeLayoutComponent,
     LoginComponent,
-    ForgotPasswordComponent,
+    ForgotPasswordComponent,NavMenuComponent
+    
     
   ],
   //providers: [LoginAuthGuard,AuthGuard,],
-  providers: [LoaderService],
+  providers: [LoaderService,LoginAuthGuard,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,80 @@
+
+.mainmenu ul#nav > li {
+    display: inline-block;
+    
+    position: relative;
+    margin: 0px -12px 0px 0px !important;
+}
+
+.mainmenu ul#nav > li > a{
+
+    line-height: 40px !important;
+}
+
+#nav {
+    list-style: outside none none;
+    background: white;
+    margin-top: 46px !important;
+    padding: 0;
+}
+
+.margin-top{
+
+    margin: -9px 0px 0px 4px;
+}
+
+.logomain{
+    height: 71px;
+    margin: -25px 0px 0px 0px;
+    width: 106px;
+}
+
+
+
+button.mat-button {
+    padding: 12px 16px 10px 15px !important;
+}
+
+.mean-container .mean-bar {
+    background: transparent none repeat scroll 0 0;
+    float: left;
+    min-height: 42px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+}
+
+.mean-container a.meanmenu-reveal {
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1px;
+    font-weight: 700;
+    height: 22px;
+    line-height: 22px;
+    padding: 13px 0 11px;
+    right: 0;
+    text-decoration: none;
+    text-indent: -9999em;
+    top: 0;
+    width: 22px;
+}
+
+.mean-container .mean-nav ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.mainmenu-area {
+    margin-top: -33px;
+    transition: all 0.3s ease 0s;
+}

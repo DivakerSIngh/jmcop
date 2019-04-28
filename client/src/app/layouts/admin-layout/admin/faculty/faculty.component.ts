@@ -17,6 +17,7 @@ export class FacultyComponent implements OnInit {
   facultyList=[];
   length = 100;
   pageSize = 10;
+  pageIndex=0;
   pageSizeOptions = [5, 10, 25, 100];
   pageNumber:number=0;
   imgURL:any;

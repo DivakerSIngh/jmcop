@@ -11,23 +11,20 @@ namespace college.webapi.Controllers
     [RoutePrefix("api/user")]
     public class UsersController : ApiController
     {
-        private readonly IGeneric<User> _genericRepository;
-        public UsersController(IGeneric<User> genericRepository)
+        private readonly IGeneric<AdminUser> _genericRepository;
+        public UsersController(IGeneric<AdminUser> genericRepository)
         {
             _genericRepository = genericRepository;
         }
 
-        [HttpGet]
-        [Route("get")]
-        public IHttpActionResult Get()
-        {
-            return Ok("Running");
-        }
+       
 
 
         [HttpPost]
-        public IHttpActionResult Get([FromBody]User user)
+        [Route("login")]
+        public IHttpActionResult Login([FromBody]AdminUser user)
         {
+            var ddd=_genericRepository.List();
             var dom = _genericRepository.Get(x => x.Email == user.Email && x.Password == user.Password).FirstOrDefault();
             if (dom != null)
             {
@@ -36,6 +33,29 @@ namespace college.webapi.Controllers
                     status = HttpStatusCode.OK.ToString(),
                     code = (int)HttpStatusCode.OK,
                     result = dom
+                };
+                return Ok(res);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+        }
+
+
+        [HttpPost]
+        [Route("create")]
+        public IHttpActionResult AddUser([FromBody]AdminUser user)
+        {
+            var ddd = _genericRepository.Add(user);
+            if (ddd != null)
+            {
+                var res = new ApiResponse()
+                {
+                    status = HttpStatusCode.OK.ToString(),
+                    code = (int)HttpStatusCode.OK,
+                    result = ddd
                 };
                 return Ok(res);
             }

@@ -17,6 +17,7 @@ export class CourseComponent implements OnInit {
   courseList=[];
   length = 100;
   pageSize = 5;
+  pageIndex=0;
   pageSizeOptions = [5, 10, 25, 100];
   pageNumber:number=0;
 

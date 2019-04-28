@@ -28,7 +28,15 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    var data=localStorage.getItem('userDetails');
+    
+        if(data!=undefined && data!=''){
+          this.router.navigate(['/admin/dashboard'])
+    
+        }else{
+          
+        }
+    
     //this.loader.display(true);
   }
   ngAfterViewInit(){

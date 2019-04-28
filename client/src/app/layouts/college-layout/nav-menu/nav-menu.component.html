@@ -1,0 +1,75 @@
+
+    <div class="mainmenu-area pull-right">
+        <div class="mainmenu hidden-sm hidden-xs mean-container">
+                <div class="mean-bar" *ngIf="isMobileMenu();">
+                        <a (click)="slideToggle()" class="meanmenu-reveal" style="right: 0px; left: auto; text-align: center; text-indent: 0px; font-size: 18px;">
+                            <span></span><span></span><span></span>
+                        </a>
+                        </div>
+            <nav>
+                <ul id="nav">
+                    <li class="current">
+                        <button mat-button [routerLink]="['/home']">Home</button>
+                    </li>
+                    <li>
+                        
+                        <button mat-button [matMenuTriggerFor]="menuabout">About
+                               <i class="fa fa-sort-desc margin-top"></i>
+                        </button>
+                        <mat-menu #menuabout="matMenu"> 
+                          <button mat-menu-item [routerLink]="['/about/vision']" class="menu-btn"> Vission And Mission </button>
+                          <button mat-menu-item [routerLink]="['/about/foundermessage']" class="menu-btn">Founder Message</button>
+                          <button mat-menu-item [routerLink]="['/about/chairmanmessage']" class="menu-btn">Chairmen Message</button>
+                          <button mat-menu-item [routerLink]="['/about/directormessage']" class="menu-btn">Director Message</button>
+                          <button mat-menu-item [routerLink]="['/about/affiliation']">Affiliation</button>
+                          
+                        </mat-menu>
+
+                       
+                    </li>
+                    <li>
+                            <button mat-button [routerLink]="['/course']">Courses </button>
+                            
+                    </li>
+                    <li>
+                          
+                            <button mat-button [routerLink]="['/department']">Department </button>
+                           
+                    </li>
+                    <li>
+                           
+                            <button mat-button [routerLink]="['/faculty']" >Faculty </button>
+                          
+                    </li>
+                    <li>
+                            <button mat-button [matMenuTriggerFor]="matfacility">Facility  <i class="fa fa-sort-desc margin-top"></i></button>
+                            <mat-menu #matfacility="matMenu"> 
+                              <button mat-menu-item [routerLink]="['/faculty/index']">Canteen</button>
+                              <button mat-menu-item [routerLink]="['/faculty/index']">Transport</button>
+                              <button mat-menu-item [routerLink]="['/faculty/index']">Libreary</button>
+                              <button mat-menu-item [routerLink]="['/faculty/index']">Classroom</button>
+                              <button mat-menu-item [routerLink]="['/faculty/index']">Sports</button>
+                            </mat-menu>
+                        
+                    </li>
+                    <li>
+                      
+                        <button mat-button [routerLink]="['/admission']" >Admission</button>
+                       
+                    </li>
+                    <li>
+                        <button mat-button >Academics</button>
+                      
+                    </li>
+                    <li>
+                            <button mat-menu-item [routerLink]="['/gallery']">Gallery</button>
+                      
+                   
+                    <li>
+                            <button mat-menu-item [routerLink]="['/contact']">Contact Us</button>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div> 

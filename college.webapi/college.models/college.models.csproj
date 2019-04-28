@@ -51,10 +51,12 @@
     <Compile Include="Faculty.cs" />
     <Compile Include="Gallery.cs" />
     <Compile Include="Library.cs" />
+    <Compile Include="StudentAdmissionForm.cs" />
     <Compile Include="PagingModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="AdminUser.cs" />
+    <Compile Include="StudentQualificationMapping.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,7 +14,7 @@ namespace college.entity
 
         public DBEntity() : base("name=collegeEntity") { }
 
-        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<AdminUser> AdminUser { get; set; }
         public virtual DbSet<Course> Course { get; set; }
         public virtual DbSet<Banner> Banner { get; set; }
         public virtual DbSet<Library> Library { get; set; }
@@ -23,11 +23,13 @@ namespace college.entity
         public virtual DbSet<Events> Events { get; set; }
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<Facility> Facility { get; set; }
+        public virtual DbSet<StudentAdmissionForm> StudentAdmissionForm { get; set; }
+        public virtual DbSet<StudentQualificationMapping> StudentQualificationMapping { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
-            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<AdminUser>().ToTable("AdminUser");
             modelBuilder.Entity<Course>().ToTable("Course");
             modelBuilder.Entity<Banner>().ToTable("Banner");
             modelBuilder.Entity<Library>().ToTable("Library");
@@ -36,6 +38,8 @@ namespace college.entity
             modelBuilder.Entity<Events>().ToTable("Events");
             modelBuilder.Entity<Department>().ToTable("Department");
             modelBuilder.Entity<Facility>().ToTable("Facility");
+            modelBuilder.Entity<StudentAdmissionForm>().ToTable("StudentAdmissionForm");
+            modelBuilder.Entity<StudentQualificationMapping>().ToTable("StudentQualificationMapping");
         }
       
 

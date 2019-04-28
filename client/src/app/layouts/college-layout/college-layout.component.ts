@@ -7,6 +7,7 @@ import { Component, OnInit,HostBinding, HostListener } from '@angular/core';
 })
 export class CollegeLayoutComponent implements OnInit {
 
+  navMenuShow:boolean=true;
   constructor() { }
 
   //  @HostBinding('class.parent-menu') isOpen = false;
@@ -25,7 +26,17 @@ export class CollegeLayoutComponent implements OnInit {
   // this.isOpen = !this.isOpen;
   // }
 
+  slideToggle(){
 
+    this.navMenuShow=  !this.navMenuShow;
+  }
+
+  isMobileMenu() {
+    // if ($(window).width() > 991) {
+    //   this.navMenuShow= false;
+    // }
+    this.navMenuShow= true;
+};
   ngOnInit() {
   }
 

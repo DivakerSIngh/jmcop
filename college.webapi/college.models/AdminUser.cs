@@ -7,7 +7,7 @@ using System.Text;
 
 namespace college.models
 {
-   public class User
+   public class AdminUser
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

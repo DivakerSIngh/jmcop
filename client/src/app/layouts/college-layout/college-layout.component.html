@@ -19,40 +19,30 @@
         
     <!-- favicon
     ============================================ -->		
-        <link rel="shortcut icon" type="image/x-icon" href="../../../../assets/img/college/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/college/favicon.ico">
     
     <!-- Google Fonts
     ============================================ -->		
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
      
-    <!-- Bootstrap CSS
-    ============================================ -->		
-        <link rel="stylesheet" href="../../../../assets/css/college/bootstrap.min.css">
+
         
-    <!-- Color Swithcer CSS
-    ============================================ -->
-        <!-- <link rel="stylesheet" href="../../../../assets/css/college/color-switcher.css"> -->
-        
-    <!-- Fontawsome CSS
-    ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/font-awesome.min.css">
-        
-        <link rel="stylesheet" href="../../../../assets/css/college/meanmenu.min.css">
+        <link rel="stylesheet" href="../../../assets/css/college/meanmenu.min.css">
         
     <!-- Animate CSS
     ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/animate.css">
+        <!-- <link rel="stylesheet" href="../../../../assets/css/college/animate.css"> -->
         
     <!-- Animated Headlines CSS
     ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/animated-headlines.css">
+        <!-- <link rel="stylesheet" href="../../../../assets/css/college/animated-headlines.css">
      
         <link rel="stylesheet" href="../../../../assets/css/college/material-design-iconic-font.css">
-        <link rel="stylesheet" href="../../../../assets/css/college/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="../../../../assets/css/college/material-design-iconic-font.min.css"> -->
         
     <!-- Slick CSS
     ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/slick.css">
+        <!-- <link rel="stylesheet" href="../../../../assets/css/college/slick.css"> -->
         
     <!-- Video CSS
     ============================================ -->
@@ -60,15 +50,16 @@
         
     <!-- Style CSS
     ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/style.css">
+        <link rel="stylesheet" href="../../../assets/css/college/style.css">
         
     <!-- Color CSS
     ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/color.css">
+        <link rel="stylesheet" href="../../../assets/css/college/color.css">
         
     <!-- Responsive CSS
     ============================================ -->
-        <link rel="stylesheet" href="../../../../assets/css/college/responsive.css">
+    
+        <link rel="stylesheet" href="../../../assets/css/college/responsive.css">
         
     </head>
     <body>
@@ -90,7 +81,7 @@
                                     <span><i class="fa fa-phone"></i> +9711226828</span> | <span><i class="fa fa-envelope-o"></i>info@jmcom.org</span> 
                                     
                                 </div>
-                                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
+                                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12" style="z-index: 999;">
                                     <div class="header-top-right">
                                         <div class="content"><a href="#" [routerLink]="['/login']" ><i  class="fa fa-user"></i>
                                             Login</a>
@@ -131,306 +122,14 @@
                                         <a href=""><img src="../../../../assets/img/college/logo/logo.png" alt="EDUCAT" class="logomain"></a>
                                     </div>
                                 </div>
-                                <div class="col-md-9">
-                                    <div class="mainmenu-area pull-right">
-                                        <div class="mainmenu hidden-sm hidden-xs">
-                                              
-                                            <nav>
-                                                <ul id="nav">
-
-                                                    <li class="current">
-                                                       
-                                                        <button mat-button [routerLink]="['/home']">Home</button>
-                                                        
-                                                       
-                                                    </li>
-                                                    <li>
-                                                        <!-- <a class="parent-menu">About</a> 
-                                                         <ul class="sub-menu" [ngStyle]="{'display' : isOpen ? 'none' : 'initial'}">
-                                                                <li><a  routerLink="/about/vision"  routerLinkActive="active">Vission And Mission</a></li>
-                                                                <li><a routerLinkActive="active" href="#" [routerLink]="['/about/foundermessage']">Founder Message</a></li>
-                                                                <li><a routerLinkActive="active" href="#" [routerLink]="['/about/chairmanmessage']">Chairmen Message</a></li>
-                                                                <li><a routerLinkActive="active" href="#" [routerLink]="['/about/directormessage']">Director Message</a></li>
-                                                                <li><a routerLinkActive="active" href="#" [routerLink]="['/about/affiliation']">Affiliation</a></li>
-                                                            </ul> -->
-                                                        <button mat-button [matMenuTriggerFor]="menuabout">About
-                                                               <i class="fa fa-sort-desc margin-top"></i>
-                                                        </button>
-                                                        <mat-menu #menuabout="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/about/vision']" class="menu-btn"> Vission And Mission </button>
-                                                          <button mat-menu-item [routerLink]="['/about/foundermessage']" class="menu-btn">Founder Message</button>
-                                                          <button mat-menu-item [routerLink]="['/about/chairmanmessage']" class="menu-btn">Chairmen Message</button>
-                                                          <button mat-menu-item [routerLink]="['/about/directormessage']" class="menu-btn">Director Message</button>
-                                                          <button mat-menu-item [routerLink]="['/about/affiliation']">Affiliation</button>
-                                                          
-                                                        </mat-menu>
-
-                                                       
-                                                    </li>
-                                                    <li>
-                                                            <button mat-button [routerLink]="['/course']">Courses </button>
-                                                            <!--[matMenuTriggerFor]="matcourse" <mat-menu #matcourse="matMenu"> 
-                                                              <button mat-menu-item [routerLink]="['/course']">B.Pharma</button>
-                                                              <button mat-menu-item [routerLink]="['/course']">D.Pharma</button>
-                                                            </mat-menu> -->
-                                                        
-                                                        <!-- <a>Courses</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">B.Pharma</a></li>
-                                                            <li><a href="courses-details.html">D.Pharma</a></li>
-                                                        </ul> -->
-                                                    </li>
-                                                    <li>
-                                                            <!-- <button mat-button [matMenuTriggerFor]="matdpt">Department  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                            <mat-menu #matdpt="matMenu"> 
-                                                              <button mat-menu-item [routerLink]="['/department/index']">B.Pharma</button>
-                                                              <button mat-menu-item [routerLink]="['/department/index']">D.Pharma</button>
-                                                            </mat-menu> -->
-                                                            <button mat-button [routerLink]="['/department']">Department </button>
-                                                            <!-- <mat-menu #matdpt="matMenu"> 
-                                                              <button mat-menu-item [routerLink]="['/department/index']">B.Pharma</button>
-                                                              <button mat-menu-item [routerLink]="['/department/index']">D.Pharma</button>
-                                                            </mat-menu> -->
-
-                                                        <!-- <a href="courses.html">Department</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">Medical Science</a></li>
-                                                            <li><a href="courses-details.html">D.Pharma</a></li>
-                                                        </ul> -->
-                                                    </li>
-                                                    <li>
-                                                            <!-- <button mat-button [matMenuTriggerFor]="matfac">Faculty  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                            <mat-menu #matfac="matMenu"> 
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">B.Pharma</button>
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">D.Pharma</button>
-                                                            </mat-menu> -->
-
-                                                            <button mat-button [routerLink]="['/faculty']" >Faculty </button>
-                                                            <!-- <mat-menu #matfac="matMenu"> 
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">B.Pharma</button>
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">D.Pharma</button>
-                                                            </mat-menu> -->
-
-                                                        <!-- <a href="courses.html">Faculty</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">B.Pharma</a></li>
-                                                            <li><a href="courses-details.html">D.Pharma</a></li>
-                                                        </ul> -->
-                                                    </li>
-                                                    <li>
-                                                            <button mat-button [matMenuTriggerFor]="matfacility">Facility  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                            <mat-menu #matfacility="matMenu"> 
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">Canteen</button>
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">Transport</button>
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">Libreary</button>
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">Classroom</button>
-                                                              <button mat-menu-item [routerLink]="['/faculty/index']">Sports</button>
-                                                            </mat-menu>
-                                                        <!-- <a href="courses.html">Facility</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">Canteen</a></li>
-                                                            <li><a href="courses-details.html">Transport</a></li>
-                                                            <li><a href="courses-details.html">Libreary</a></li>
-                                                            <li><a href="courses-details.html">Classroom</a></li>
-                                                            <li><a href="courses-details.html">Sports</a></li>
-                                                        </ul> -->
-                                                    </li>
-                                                    <li>
-                                                        <!-- <a href="courses.html">Admission</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">Download Broucher 2019-2020</a></li>
-                                                        </ul> -->
-
-                                                        <button mat-button [routerLink]="['/admission']" >Admission</button>
-                                                       
-                                                    </li>
-                                                    <li>
-                                                        <!-- <a href="courses.html">Academics</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">Notice</a></li>
-                                                        </ul> -->
-
-                                                        <button mat-button >Academics</button>
-                                                      
-                                                    </li>
-                                                    <li>
-                                                            <button mat-menu-item [routerLink]="['/gallery']">Gallery</button>
-                                                      
-                                                   
-                                                    <li>
-                                                            <button mat-menu-item [routerLink]="['/contact']">Contact Us</button>
-                                                        
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                       
-                                        <!--Search Form-->
-                                        <div class="search">
-                                            <div class="search-form">
-                                                <form id="search-form" action="#">
-                                                    <input type="search" placeholder="Search here..." name="search" />
-                                                    <button type="submit">
-                                                        <span><i class="fa fa-search"></i></span>
-                                                    </button>
-                                                </form>                                
-                                            </div>
-                                        </div>
-                                        <!--End of Search Form-->
-                                    </div> 
-                                </div>
+                                <div class="col-sm-9">
+                            <app-nav-menu></app-nav-menu>
+                            
+                        </div>
                             </div>
                         </div>
                     </div>  
-                    <!-- Mobile Menu Area start -->
-
-                    <div class="mobile-menu-area" >
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <div class="mobile-menu">
-                                            <a href="#nav" class="meanmenu-reveal" style="right: 0px; left: auto; text-align: center; text-indent: 0px; font-size: 18px;"><span></span><span></span><span></span></a>
-                                        <nav id="dropdown" style="display: none;">
-                                            <ul>
-
-                                                <li class="current">
-                                                   
-                                                    <button mat-button [routerLink]="['/home']">Home</button>
-                                                    
-                                                   
-                                                </li>
-                                                <li>
-                                                    <!-- <a>About</a> 
-                                                     <ul class="sub-menu">
-                                                            <li><a  routerLink="/about/vision" >Vission And Mission</a></li>
-                                                            <li><a href="#" [routerLink]="['/about/foundermessage']">Founder Message</a></li>
-                                                            <li><a href="#" [routerLink]="['/about/chairmanmessage']">Chairmen Message</a></li>
-                                                            <li><a href="#" [routerLink]="['/about/directormessage']">Director Message</a></li>
-                                                            <li><a href="#" [routerLink]="['/about/affiliation']">Affiliation</a></li>
-                                                        </ul> -->
-                                                    <button mat-button [matMenuTriggerFor]="menuabout">About
-                                                           <i class="fa fa-sort-desc margin-top"></i>
-                                                    </button>
-                                                    <mat-menu #menuabout="matMenu"> 
-                                                      <button mat-menu-item [routerLink]="['/about/vision']" class="menu-btn"> Vission And Mission</button>
-                                                      <button mat-menu-item [routerLink]="['/about/foundermessage']" class="menu-btn">Founder Message</button>
-                                                      <button mat-menu-item [routerLink]="['/about/chairmanmessage']" class="menu-btn">Chairmen Message</button>
-                                                      <button mat-menu-item [routerLink]="['/about/directormessage']" class="menu-btn">Director Message</button>
-                                                      <button mat-menu-item [routerLink]="['/about/affiliation']">Affiliation</button>
-                                                      
-                                                    </mat-menu>
-
-                                                   
-                                                </li>
-                                                <li>
-                                                        <button mat-button [matMenuTriggerFor]="matcourse">Courses  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                        <mat-menu #matcourse="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/course']">B.Pharma</button>
-                                                          <button mat-menu-item [routerLink]="['/course']">D.Pharma</button>
-                                                        </mat-menu>
-                                                    
-                                                    <!-- <a>Courses</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="courses-details.html">B.Pharma</a></li>
-                                                        <li><a href="courses-details.html">D.Pharma</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <li>
-                                                        <!-- <button mat-button [matMenuTriggerFor]="matdpt">Department  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                        <mat-menu #matdpt="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/department']">B.Pharma</button>
-                                                          <button mat-menu-item [routerLink]="['/department']">D.Pharma</button>
-                                                        </mat-menu> -->
-                                                        <button mat-button [routerLink]="['/department']">Department</button>
-                                                        <!-- <mat-menu #matdpt="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/department']">B.Pharma</button>
-                                                          <button mat-menu-item [routerLink]="['/department']">D.Pharma</button>
-                                                        </mat-menu> -->
-
-
-                                                    <!-- <a href="courses.html">Department</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="courses-details.html">Medical Science</a></li>
-                                                        <li><a href="courses-details.html">D.Pharma</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <li>
-                                                        <!-- <button mat-button [matMenuTriggerFor]="matfac">Faculty  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                        <mat-menu #matfac="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">B.Pharma</button>
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">D.Pharma</button>
-                                                        </mat-menu> -->
-
-                                                        <button mat-button [routerLink]="['/faculty/index']">Faculty</button>
-                                                        <!-- <mat-menu #matfac="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">B.Pharma</button>
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">D.Pharma</button>
-                                                        </mat-menu> -->
-
-                                                    <!-- <a href="courses.html">Faculty</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="courses-details.html">B.Pharma</a></li>
-                                                        <li><a href="courses-details.html">D.Pharma</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <li>
-                                                        <button mat-button [matMenuTriggerFor]="matfacility">Facility  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                        <mat-menu #matfacility="matMenu"> 
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">Canteen</button>
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">Transport</button>
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">Libreary</button>
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">Classroom</button>
-                                                          <button mat-menu-item [routerLink]="['/faculty/index']">Sports</button>
-                                                        </mat-menu>
-                                                    <!-- <a href="courses.html">Facility</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="courses-details.html">Canteen</a></li>
-                                                        <li><a href="courses-details.html">Transport</a></li>
-                                                        <li><a href="courses-details.html">Libreary</a></li>
-                                                        <li><a href="courses-details.html">Classroom</a></li>
-                                                        <li><a href="courses-details.html">Sports</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <li>
-                                                    <!-- <a href="courses.html">Admission</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="courses-details.html">Download Broucher 2019-2020</a></li>
-                                                    </ul> -->
-
-                                                    <button mat-button [matMenuTriggerFor]="matadmisiion">Admission  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                    <mat-menu #matadmisiion="matMenu"> 
-                                                      <button mat-menu-item [routerLink]="['/faculty/index']">Download Broucher 2019-2020</button>
-                                                      
-                                                    </mat-menu>
-                                                </li>
-                                                <li>
-                                                    <!-- <a href="courses.html">Academics</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="courses-details.html">Notice</a></li>
-                                                    </ul> -->
-
-                                                    <button mat-button [matMenuTriggerFor]="mataca">Academics  <i class="fa fa-sort-desc margin-top"></i></button>
-                                                    <mat-menu #mataca="matMenu"> 
-                                                      <button mat-menu-item [routerLink]="['/academics']">Notice</button>
-                                                      
-                                                    </mat-menu>
-                                                </li>
-                                                <li>
-                                                        <button mat-menu-item [routerLink]="['/gallery']">Gallery</button>
-                                                  
-                                               
-                                                <li>
-                                                        <button mat-menu-item [routerLink]="['/contact']">Contact Us</button>
-                                                    
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>					
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu Area end -->    
+                    
                 </header>
                 <!--End of Header Area-->
                 <!--Slider Area Start-->

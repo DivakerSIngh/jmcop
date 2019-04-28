@@ -2074,7 +2074,7 @@ span.comment-time {padding-right: 3px; position: relative;}
 .breadcrumb-banner-area {
     /* background: rgba(0, 0, 0, 0) url("img/banner/4.jpg") no-repeat scroll 0 0; */
     color: #ffffff;
-    padding: 110px 0;
+    padding:50px 0;
     position: relative;
 }
 .breadcrumb-banner-area.fixed-bg {
