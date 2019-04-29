@@ -29,6 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { AdmissionFormComponent } from './admin/admission-form/admission-form.component';
 import { StudentFormComponent } from './admin/student-form/student-form.component';
+import { GalleryComponent } from './admin/gallery/gallery.component';
+import { EventsComponent } from './admin/events/events.component';
+import { LibraryComponent } from './admin/library/library.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -65,7 +68,10 @@ import { StudentFormComponent } from './admin/student-form/student-form.componen
     CourseComponent,
     AcademicsComponent,
     AdmissionFormComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    GalleryComponent,
+    EventsComponent,
+    LibraryComponent
   ]
 })
 

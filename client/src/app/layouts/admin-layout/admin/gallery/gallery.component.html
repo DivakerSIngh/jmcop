@@ -1,0 +1,41 @@
+<div class="col-sm-12 align-center">
+  <input hidden type="file" (change)="previewGal($event.target.files)"  #fileInputgallery id="input-file-id">
+</div>
+
+<div class="col-sm-12 align-center">
+    <div _ngcontent-c10="" class="card-avatar">
+      <a>
+              <img class="img img-upload" (click)="fileInputgallery.click()" [src]="imgURL" onerror="this.src='../../../assets/img/banner-default.png'" style="height: 200px;
+              width: 507px;">
+      </a>
+  </div>
+              <!-- <img class="img img-upload" (click)="fileInput5.click()" [src]="imgURL" onerror="this.src='../../../assets/img/banner-default.png'" style="height: 200px;
+              width: 507px;"></a></div> -->
+          <button mat-raised-button type="button"  class="btn btn-danger" (click)="uploadGalToServer(5)">Save</button>
+</div>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title ">College Images</h4>
+            
+        </div>
+        <div class="card-body">
+              <mat-grid-list cols="4" rowHeight="100px">
+                      <mat-grid-tile
+                          *ngFor="let tile of gallery"
+                          [colspan]="tile.cols"
+                          [rowspan]="tile.rows"
+                          [style.background]="tile.color">
+                        
+                        
+                        <img [src]="tile.url" onerror="this.src='../../../assets/img/banner-default.png'" style="width: 184px;height: 90px;">
+                        <button mat-raised-button type="button" matTooltip="Remove" (click)="removeGal(tile.id)" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon btn-white">
+                            <i class="material-icons">close</i>
+                        </button>
+                        
+                      </mat-grid-tile>
+                    </mat-grid-list>
+           
+        </div>
+    </div>
+</div>

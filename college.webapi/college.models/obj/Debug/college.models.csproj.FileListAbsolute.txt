@@ -20,3 +20,9 @@ D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.models\bin\Debug\college.
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.models\obj\Debug\college.models.csproj.CoreCompileInputs.cache
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.models\obj\Debug\college.models.dll
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.models\obj\Debug\college.models.pdb
+C:\angular4\JMCOP\college.webapi\college.models\bin\Debug\college.models.dll
+C:\angular4\JMCOP\college.webapi\college.models\bin\Debug\college.models.pdb
+C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.csprojAssemblyReference.cache
+C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.csproj.CoreCompileInputs.cache
+C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.dll
+C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.pdb
