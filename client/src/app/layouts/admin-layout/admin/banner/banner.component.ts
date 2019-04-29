@@ -130,7 +130,7 @@ switch (type) {
        
       } else {
         debugger
-       // this.loader.display(false);
+        this.loader.display(false);
       }
 
     })

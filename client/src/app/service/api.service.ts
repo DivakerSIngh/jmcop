@@ -12,8 +12,8 @@ import { MatSnackBar } from '@angular/material';
   providedIn: 'root'
 })
 export class ApiService {
-//apiBaseUrl:string="http://api.jmcop.org:80/api/";
-apiBaseUrl:string='http://localhost:50611/api/';
+apiBaseUrl:string="http://api.jmcop.org:80/api/";
+//apiBaseUrl:string='http://localhost:50611/api/';
 token:any;
   constructor(private httpClient: HttpClient,private loader:LoaderService,private snackBar:MatSnackBar) {
   }
