@@ -69,11 +69,11 @@ getAllHomePageBanner(){
     if (response.code ==200) {
      this.bannerAllImages=response.result;
      this.bannerAllImages.forEach(element => {
-       if(element.type==1){
-        this.tiles.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.imgUrl,id:element.id});
+       if(element.Type==1){
+        this.tiles.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
        }
-       if(element.type==5){
-        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.imgUrl,id:element.id});
+       if(element.Type==5){
+        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
        }
       });
     }
