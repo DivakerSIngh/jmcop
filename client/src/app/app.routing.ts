@@ -67,6 +67,13 @@ const routes: Routes =[
      
     },
     {
+      path: 'facility',
+      component: CollegeLayoutComponent,
+      children: 
+      [{path: '',loadChildren: './layouts/college-layout/facility/facility.module#FacilityModule'}]
+     
+    },
+    {
       path: 'contact',
       component: CollegeLayoutComponent,
       children: 
