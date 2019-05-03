@@ -21,13 +21,13 @@
                                           <div class="ripple-container"></div>
                                       </a>
                                   </li>
-                                  <!-- <li class="nav-item">
-                                      <a mat-button class="nav-link" href="#liberay" data-toggle="tab">
-                                          <i class="material-icons">event</i> Liberary
+                                  <li class="nav-item">
+                                      <a mat-button class="nav-link" href="#events" data-toggle="tab">
+                                          <i class="material-icons">event</i> Events
                                           <div class="ripple-container"></div>
                                       </a>
                                   </li>
-                                  <li class="nav-item">
+                                 <!--  <li class="nav-item">
                                       <a mat-button class="nav-link" href="#setting" data-toggle="tab">
                                           <i class="material-icons">event</i> Event
                                           <div class="ripple-container"></div>
@@ -80,116 +80,9 @@
                           </div>
                           <div class="tab-pane" id="messages">
                                 <app-gallery></app-gallery>
-                              <!-- <div class="col-sm-12 align-center">
-                                    <input hidden type="file" (change)="preview($event.target.files)"  #fileInputgallery id="input-file-id">
-                                </div>
-    
-                                  <div class="col-sm-12 align-center">
-                                      <div _ngcontent-c10="" class="card-avatar">
-                                        <a>
-                                                <img class="img img-upload" (click)="fileInputgallery.click()" [src]="imgURL" onerror="this.src='../../../assets/img/banner-default.png'" style="height: 200px;
-                                                width: 507px;">
-                                        </a>
-                                    </div>
-                                             
-                                            <button mat-raised-button type="button"  class="btn btn-danger" (click)="uploadToServer(5)">Save</button>
-                                  </div>
-                                  <div class="col-md-12">
-                                      <div class="card">
-                                          <div class="card-header card-header-danger">
-                                              <h4 class="card-title ">College Images</h4>
-                                              
-                                          </div>
-                                          <div class="card-body">
-                                                <mat-grid-list cols="4" rowHeight="100px">
-                                                        <mat-grid-tile
-                                                            *ngFor="let tile of gallery"
-                                                            [colspan]="tile.cols"
-                                                            [rowspan]="tile.rows"
-                                                            [style.background]="tile.color">
-                                                          
-                                                          
-                                                          <img [src]="tile.url" onerror="this.src='../../../assets/img/banner-default.png'" style="width: 184px;height: 90px;">
-                                                          <button mat-raised-button type="button" matTooltip="Remove" (click)="remove(tile.id)" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon btn-white">
-                                                              <i class="material-icons">close</i>
-                                                          </button>
-                                                          
-                                                        </mat-grid-tile>
-                                                      </mat-grid-list>
-                                             
-                                          </div>
-                                      </div>
-                                  </div> -->
                           </div>
-                          <div class="tab-pane" id="liberay">
-                              <table class="table">
-                                  <tbody>
-                                      <tr>
-                                          <td>
-                                              <div class="form-check">
-                                                  <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox" value="">
-                                                      <span class="form-check-sign">
-                                                          <span class="check"></span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </td>
-                                          <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="form-check">
-                                                  <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox" value="" checked>
-                                                      <span class="form-check-sign">
-                                                          <span class="check"></span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </td>
-                                          <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                          </td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="form-check">
-                                                  <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox" value="" checked>
-                                                      <span class="form-check-sign">
-                                                          <span class="check"></span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </td>
-                                          <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
+                          <div class="tab-pane" id="events">
+                              <app-events></app-events>
                           </div>
 
                           <div class="tab-pane" id="setting">

@@ -3,7 +3,13 @@
 
     <div class="loader-overlay loderSpinner" *ngIf="showLoader">
         <div>
-                <mat-spinner></mat-spinner>
+                <!-- <mat-spinner></mat-spinner> -->
+                <div class="loader-backdrop">          
+                                <div class="loader">
+                                    <div class="ball-1"></div>
+                                    <div class="ball-2"></div>
+                                </div>
+                            </div>
         </div>
 </div>
 </router-outlet>

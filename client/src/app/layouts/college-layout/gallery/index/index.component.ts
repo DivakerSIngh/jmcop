@@ -38,17 +38,6 @@ export class IndexComponent implements OnInit {
   }
   ngOnInit() {
     this.GalleryImages();
-    // const slideItems = [
-    //   { src: '../../../../assets/img/college/slider/1.jpg', title: '' },
-    //   { src: '../../../../assets/img/college/slider/2.jpg', title: '' },
-    //   { src: '../../../../assets/img/college/slider/3.jpg', title: '' },
-    //   { src: '../../../../assets/img/college/slider/4.jpg', title: '' },
-    //   { src: '../../../../assets/img/college/slider/5.jpg', title: '' },
-    // ];
- 
-    // this.slider.items = slideItems;
-
-
   }
 
 }

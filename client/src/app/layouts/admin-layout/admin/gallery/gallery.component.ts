@@ -38,7 +38,7 @@ export class GalleryComponent implements OnInit {
 
    
   }
-  preview(files) {
+  previewGal(files) {
     if (files.length === 0)
       return;
  

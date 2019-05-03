@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
   getEvents(){
     this._apiService.httpGet(constants.getAllCourse).subscribe((response) => {
       if (response.code ==200) {
-        this.courseList=response.result;
+        this.courseList=response.result.filter(x=>x.Type==4);
       }
     })
   }

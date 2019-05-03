@@ -5,7 +5,7 @@
   export const loginUrl: string = 'user/login';
   export const bannerUpload: string = 'fileupload/banner';
   export const galleryUpload: string = 'fileupload/gallery';
-  export const eventsUpload: string = 'fileupload/banner';
+  export const eventsUpload: string = 'fileupload/events';
   export const facultyImage: string = 'fileupload/faculty';
   
 
