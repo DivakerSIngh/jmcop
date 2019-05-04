@@ -25,6 +25,8 @@ namespace college.entity
         public virtual DbSet<Facility> Facility { get; set; }
         public virtual DbSet<StudentAdmissionForm> StudentAdmissionForm { get; set; }
         public virtual DbSet<StudentQualificationMapping> StudentQualificationMapping { get; set; }
+        public virtual DbSet<Enquiry> Enquiry { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -40,6 +42,7 @@ namespace college.entity
             modelBuilder.Entity<Facility>().ToTable("Facility");
             modelBuilder.Entity<StudentAdmissionForm>().ToTable("StudentAdmissionForm");
             modelBuilder.Entity<StudentQualificationMapping>().ToTable("StudentQualificationMapping");
+            modelBuilder.Entity<Enquiry>().ToTable("Enquiry");
         }
       
 

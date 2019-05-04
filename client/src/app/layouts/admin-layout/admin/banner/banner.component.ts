@@ -92,45 +92,21 @@ remove(id){
 }
   uploadFileToActivity(file:any,type) {
     
-var url=constants.bannerUpload
-switch (type) {
-  case 1:
-  url=constants.bannerUpload
-    break;
-
-    case 2:
-    url=constants.bannerUpload
-      break;
-
-      case 3:
-      url=constants.bannerUpload
-        break;
-
-        case 4:
-        url=constants.bannerUpload
-          break;
-          case 5:
-          url=constants.galleryUpload
-            break;
-  default:
-    break;
-}
-
-    this.loader.display(true);
+   
     let formData:FormData = new FormData();
     formData.append(file.name, file);
-    var result = this.http.upload(formData,url);
+    var result = this.http.upload(formData,constants.bannerUpload);
     result.subscribe((response) => {
       
-      if (response.code ==200) {
-        debugger
+      if (response.status ==200) {
+        
         this.getAllHomePageBanner();      
-        this.loader.display(false);
+       
         this.imgURL=null;
        
       } else {
-        debugger
-        this.loader.display(false);
+        
+       
       }
 
     })

@@ -11,7 +11,7 @@
   </div>
               <!-- <img class="img img-upload" (click)="fileInput5.click()" [src]="imgURL" onerror="this.src='../../../assets/img/banner-default.png'" style="height: 200px;
               width: 507px;"></a></div> -->
-          <button mat-raised-button type="button"  class="btn btn-danger" (click)="uploadGalToServer(5)">Save</button>
+          <button mat-raised-button type="button"  class="btn btn-danger" (click)="uploadEvtToServer(5)">Save</button>
 </div>
 <div class="col-md-12">
     <div class="card">
@@ -29,7 +29,7 @@
                         
                         
                         <img [src]="tile.url" onerror="this.src='../../../assets/img/banner-default.png'" style="width: 184px;height: 90px;">
-                        <button mat-raised-button type="button" matTooltip="Remove" (click)="removeGal(tile.id)" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon btn-white">
+                        <button mat-raised-button type="button" matTooltip="Remove" (click)="removeEvt(tile.id)" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon btn-white">
                             <i class="material-icons">close</i>
                         </button>
                         

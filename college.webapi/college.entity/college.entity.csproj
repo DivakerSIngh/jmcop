@@ -70,6 +70,18 @@
     <Compile Include="Migrations\201904281316536_newdb.Designer.cs">
       <DependentUpon>201904281316536_newdb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905041157330_newtableadded.cs" />
+    <Compile Include="Migrations\201905041157330_newtableadded.Designer.cs">
+      <DependentUpon>201905041157330_newtableadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905041208014_newtableaddedvolumn.cs" />
+    <Compile Include="Migrations\201905041208014_newtableaddedvolumn.Designer.cs">
+      <DependentUpon>201905041208014_newtableaddedvolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905041214522_newtableaddedvolumnchh.cs" />
+    <Compile Include="Migrations\201905041214522_newtableaddedvolumnchh.Designer.cs">
+      <DependentUpon>201905041214522_newtableaddedvolumnchh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -104,6 +116,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904281316536_newdb.resx">
       <DependentUpon>201904281316536_newdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041157330_newtableadded.resx">
+      <DependentUpon>201905041157330_newtableadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041208014_newtableaddedvolumn.resx">
+      <DependentUpon>201905041208014_newtableaddedvolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041214522_newtableaddedvolumnchh.resx">
+      <DependentUpon>201905041214522_newtableaddedvolumnchh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

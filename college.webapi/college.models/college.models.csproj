@@ -45,6 +45,7 @@
     <Compile Include="Banner.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="Enquiry.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Facility.cs" />

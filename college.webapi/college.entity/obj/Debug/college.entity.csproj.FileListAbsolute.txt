@@ -119,3 +119,6 @@ C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.csproj.
 C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.csproj.CopyComplete
 C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.dll
 C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.pdb
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableadded.resources
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumn.resources
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumnchh.resources

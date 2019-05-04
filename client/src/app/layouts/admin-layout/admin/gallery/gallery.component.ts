@@ -25,7 +25,7 @@ export class GalleryComponent implements OnInit {
   constructor(private loader:LoaderService, private http: ApiService,private httpc: HttpClient) { }
 
   ngOnInit() {
-    this.getAllHomePageBanner();
+    this.getAllGallery();
   }
   uploadFile($event){
 
@@ -61,17 +61,15 @@ export class GalleryComponent implements OnInit {
     this.uploadGal(this.fileToUpload,type); 
 }
 
-getAllHomePageBanner(){
-  
+getAllGallery(){
+  debugger
   this.http.httpGet(constants.getallBanner).subscribe((response) => {
     this.tiles=[];
     this.gallery=[];
     if (response.code ==200) {
      //this.gallery=response.result.filter(x=>x.Type==5);
      response.result.filter(x=>x.Type==5).forEach(element => {
-       if(element.type==5){
-        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.imgUrl,id:element.id});
-       }
+        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
       });
     }
    
@@ -83,12 +81,12 @@ removeGal(id){
   this.http.httpGet(constants.homeBannnerDelete+"id="+id).subscribe((response) => {
     
     if (response.code ==200) {
-      this.getAllHomePageBanner();          
+      this.getAllGallery();          
     }
   })
 }
   uploadGal(file:any,type) {
-    
+    debugger
 var url=constants.galleryUpload
 
     this.loader.display(true);
@@ -97,15 +95,15 @@ var url=constants.galleryUpload
     var result = this.http.upload(formData,url);
     result.subscribe((response) => {
       
-      if (response.code ==200) {
+      if (response.status ==200) {
         debugger
-        this.getAllHomePageBanner();      
-        this.loader.display(false);
+        this.getAllGallery();      
+       
         this.imgURL=null;
        
       } else {
         debugger
-        this.loader.display(false);
+       
       }
 
     })

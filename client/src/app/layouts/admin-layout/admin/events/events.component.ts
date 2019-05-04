@@ -55,9 +55,9 @@ export class EventsComponent implements OnInit {
     }
   }
 
-  uploadGalToServer(type){
+  uploadEvtToServer(type){
 
-    this.uploadGal(this.fileToUpload,type); 
+    this.uploadEvt(this.fileToUpload,type); 
 }
 
 getAllHomePageBanner(){
@@ -67,17 +67,17 @@ getAllHomePageBanner(){
     this.events=[];
     if (response.code ==200) {
      //this.events=response.result.filter(x=>x.Type==5);
-     response.result.filter(x=>x.Type==5).forEach(element => {
-       if(element.type==5){
-        this.events.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.imgUrl,id:element.id});
-       }
+     response.result.filter(x=>x.Type==4).forEach(element => {
+      
+        this.events.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
+      
       });
     }
    
   })
 }
 
-removeGal(id){
+removeEvt(id){
   
   this.http.httpGet(constants.homeBannnerDelete+"id="+id).subscribe((response) => {
     
@@ -86,7 +86,7 @@ removeGal(id){
     }
   })
 }
-  uploadGal(file:any,type) {
+  uploadEvt(file:any,type) {
     
 var url=constants.eventsUpload
 
@@ -96,15 +96,15 @@ var url=constants.eventsUpload
     var result = this.http.upload(formData,url);
     result.subscribe((response) => {
       
-      if (response.code ==200) {
-        debugger
+      if (response.status ==200) {
+        
         this.getAllHomePageBanner();      
-        this.loader.display(false);
+       
         this.imgURL=null;
        
       } else {
-        debugger
-        this.loader.display(false);
+        
+      //  this.loader.display(false);
       }
 
     })

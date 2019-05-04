@@ -22,6 +22,12 @@
   export const deleteCourse: string = 'course/delete';
   export const addCourse: string = 'course/add';
   export const updateCourse: string = 'course/update';
+  export const sendEnquiry: string = 'admin/postenquiry';
+
+  export const getEnquiry: string = 'admin/getallenquiry?';
+  
+
+
 
   export const admisionForm: string = 'admission/postform';
   export const studentFormList: string = 'admission/getall?';

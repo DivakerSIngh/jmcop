@@ -12,8 +12,8 @@ import { MatSnackBar } from '@angular/material';
   providedIn: 'root'
 })
 export class ApiService {
-apiBaseUrl:string="http://api.jmcop.org:80/api/";
-//apiBaseUrl:string='http://localhost:50611/api/';
+//apiBaseUrl:string="http://api.jmcop.org:80/api/";
+apiBaseUrl:string='http://localhost:50611/api/';
 token:any;
   constructor(private httpClient: HttpClient,private loader:LoaderService,private snackBar:MatSnackBar) {
   }
@@ -79,7 +79,7 @@ upload(formData:any,url) {
       return resp;
 
     }), catchError( error => {
-      this.loader.display(true);
+    this.loader.display(false);
       this.openSnackBar(error.message);
       console.log("createOrder error",error );
     return throwError("createOrder: " + error)

@@ -20,9 +20,9 @@ export class UserProfileComponent implements OnInit {
 debugger
   this.userdetails= JSON.parse(localStorage.getItem('userDetails'))
   this.frm.setValue({
-    id:this.userdetails.id,
-    name: this.userdetails.name,
-    email: this.userdetails.email,
+    id:this.userdetails.Id,
+    name: this.userdetails.Name,
+    email: this.userdetails.Email,
   })
    
   }

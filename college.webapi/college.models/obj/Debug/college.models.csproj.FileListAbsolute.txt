@@ -26,3 +26,4 @@ C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.csprojA
 C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.csproj.CoreCompileInputs.cache
 C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.dll
 C:\angular4\JMCOP\college.webapi\college.models\obj\Debug\college.models.pdb
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.models\obj\Debug\college.models.csprojAssemblyReference.cache

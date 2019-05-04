@@ -1,14 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import * as Chartist from 'chartist';
-
+import { LoaderService } from 'app/service/loader.service';
+import { MatSnackBar } from '@angular/material';
+import { Router } from '@angular/router';
+import { ApiService } from 'app/service/api.service';
+import * as constants from '../../../../service/apiConfig';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  length = 100;
+  pageSize = 10;
+  pageIndex=0;
+  pageSizeOptions = [5, 10, 25, 100];
+  pageNumber:number=0;
+  lstenquiry:any=[];
+  constructor(private loader:LoaderService,  private elementRef: ElementRef,private snackBar:MatSnackBar, private router: Router, private http: ApiService) {
+    this.getAllEnquiry();
+  }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -145,6 +156,22 @@ export class DashboardComponent implements OnInit {
 
       //start animation for the Emails Subscription Chart
       this.startAnimationForBarChart(websiteViewsChart);
+  }
+
+  getAllEnquiry(){
+    debugger
+    var result = this.http.httpGet(constants.getEnquiry+"pageNumber="+this.pageNumber+"&pageSize="+this.pageSize);
+    result.subscribe((response) => {
+      if (response.code ==200) {
+        
+        this.lstenquiry=response.result;
+        this.length=response.pages;
+      } else {
+     
+      }
+
+    })
+
   }
 
 }
