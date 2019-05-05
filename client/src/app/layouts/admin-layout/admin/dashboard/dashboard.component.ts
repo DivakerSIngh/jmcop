@@ -174,4 +174,8 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  ngAfterViewInit(){
+    this.loader.display(false);
+ }
+
 }

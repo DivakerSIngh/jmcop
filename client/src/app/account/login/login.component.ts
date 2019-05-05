@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
     var data=localStorage.getItem('userDetails');
     
         if(data!=undefined && data!=''){
+          this.loader.display(true);
           this.router.navigate(['/admin/dashboard'])
     
         }else{
@@ -40,6 +41,7 @@ export class LoginComponent implements OnInit {
     //this.loader.display(true);
   }
   ngAfterViewInit(){
+    
   //  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#f05a66';
  }
 //  login(){

@@ -46,5 +46,35 @@ namespace college.webapi.Models
         public string subjects { get; set; }
         public string boards { get; set; }
     }
-    
+
+
+    public class StudentAdmissionFormResponse
+    {
+        public StudentAdmissionFormResponse()
+        {
+            qualificationList = new List<QualificationResp>();
+        }
+        public int id { get; set; }
+        public string candidatename { get; set; }
+        public string fathername { get; set; }
+        public string mothername { get; set; }
+        public string mobile { get; set; }
+        public string email { get; set; }
+        public string address { get; set; }
+        public string state { get; set; }
+        public int coursetype { get; set; }
+        public string city { get; set; }
+        public List<QualificationResp> qualificationList { get; set; }
+        public int registrationNumber { get; set; }
+        public string submittedStatus { get; set; }
+    }
+
+    public class QualificationResp
+    {
+        public string sclass { get; set; }
+        public string yearofpassing { get; set; }
+        public string subjects { get; set; }
+        public string boards { get; set; }
+    }
+
 }

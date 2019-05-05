@@ -74,13 +74,88 @@ namespace college.webapi.Controllers
 
         }
 
+        [HttpGet]
+        [Route("getbyid")]
+        public IHttpActionResult get(int id)
+        {
+            //var lst = _admissionForm.List();
+            var dom = new StudentAdmissionFormResponse();
+            var x = _admissionForm.GetById(id);
+            dom = new StudentAdmissionFormResponse()
+            {
+
+                registrationNumber = x.RegistrationNumber,
+                submittedStatus = string.IsNullOrEmpty(x.SubmittedStatus) ? "" : "Submitted",
+                id = x.Id,
+                address = x.Address,
+                candidatename = x.CandidateName,
+                city = x.City,
+                coursetype = x.CourseType,
+                email = x.Email,
+                fathername = x.FatherName,
+                qualificationList = _studentMapping.Get(d=>d.StudentAdmissionID== id).ToList().ConvertAll(xy => new QualificationResp
+                {
+                    boards = xy.Boards,
+                    sclass = xy.Class,
+                    subjects = xy.Subjects,
+                    yearofpassing = xy.YearOfPassing,
+                }).ToList(),
+                mobile = x.Mobile,
+                mothername = x.MotherName,
+                state = x.State
+
+            };
+
+            if (dom != null)
+            {
+                var res = new ApiResponse()
+                {
+                    status = HttpStatusCode.OK.ToString(),
+                    code = (int)HttpStatusCode.OK,
+                    result = dom,
+                    pages = 0
+                };
+                return Ok(res);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+        }
+
 
 
         [HttpGet]
         [Route("getall")]
         public IHttpActionResult GetAll([System.Web.Http.FromUri] PagingModel pagingModel)
         {
-            var lst = _admissionForm.List();
+            //var lst = _admissionForm.List();
+            var lst = _admissionForm.List().ToList().ConvertAll(x => new StudentAdmissionFormResponse
+            {
+                registrationNumber=x.RegistrationNumber,
+                submittedStatus=string.IsNullOrEmpty(x.SubmittedStatus)?"":"Submitted",
+                id=x.Id,
+                address = x.Address,
+                candidatename = x.CandidateName,
+                city = x.City,
+                coursetype = x.CourseType,
+                email = x.Email,
+                fathername = x.FatherName,
+                qualificationList = _studentMapping.List().Where(y => y.StudentAdmissionID == x.Id).ToList().ConvertAll(xy => new QualificationResp
+                {
+                    boards = xy.Boards,
+                    sclass = xy.Boards,
+                    subjects = xy.Subjects,
+                    yearofpassing = xy.YearOfPassing,
+                }).ToList(),
+                mobile=x.Mobile,
+                mothername=x.MotherName,
+                state=x.State
+
+            }).ToList();
+
+
 
             #region Paging
             int count = lst.Count();
@@ -90,7 +165,7 @@ namespace college.webapi.Controllers
             int TotalPages = (int)Math.Ceiling(count / (double)PageSize);
 
             // Returns List of Customer after applying Paging   
-            var items = lst.OrderBy(x => x.Id).Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+            var items = lst.OrderBy(x => x.id).Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
 
             // if CurrentPage is greater than 1 means it has previousPage  
             var previousPage = CurrentPage > 1 ? "Yes" : "No";

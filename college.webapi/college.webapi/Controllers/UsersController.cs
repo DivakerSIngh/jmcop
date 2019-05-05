@@ -24,7 +24,7 @@ namespace college.webapi.Controllers
         [Route("login")]
         public IHttpActionResult Login([FromBody]AdminUser user)
         {
-            var ddd=_genericRepository.List();
+      
             var dom = _genericRepository.Get(x => x.Email == user.Email && x.Password == user.Password).FirstOrDefault();
             if (dom != null)
             {

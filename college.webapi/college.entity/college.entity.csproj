@@ -82,6 +82,10 @@
     <Compile Include="Migrations\201905041214522_newtableaddedvolumnchh.Designer.cs">
       <DependentUpon>201905041214522_newtableaddedvolumnchh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905050811597_newtableaddedvolumnchhas.cs" />
+    <Compile Include="Migrations\201905050811597_newtableaddedvolumnchhas.Designer.cs">
+      <DependentUpon>201905050811597_newtableaddedvolumnchhas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905041214522_newtableaddedvolumnchh.resx">
       <DependentUpon>201905041214522_newtableaddedvolumnchh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905050811597_newtableaddedvolumnchhas.resx">
+      <DependentUpon>201905050811597_newtableaddedvolumnchhas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

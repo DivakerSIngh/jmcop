@@ -398,3 +398,8 @@ C:\angular4\JMCOP\college.webapi\college.webapi\obj\Release\college.webapi.cspro
 C:\angular4\JMCOP\college.webapi\college.webapi\obj\Release\college.webapi.csproj.CopyComplete
 C:\angular4\JMCOP\college.webapi\college.webapi\obj\Release\college.webapi.dll
 C:\angular4\JMCOP\college.webapi\college.webapi\obj\Release\college.webapi.pdb
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.webapi\bin\AutoMapper.dll
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.webapi\bin\AutoMapper.pdb
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.webapi\bin\AutoMapper.xml
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.webapi\bin\EntityFramework.xml
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.webapi\bin\EntityFramework.SqlServer.xml

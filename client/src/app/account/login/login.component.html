@@ -15,7 +15,7 @@
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-              <input matInput placeholder="**********" (keyup)="keyup($event)" #refName required  formControlName="password"  >
+              <input matInput type="password" placeholder="Password" (keyup)="keyup($event)" #refName required  formControlName="password"  >
             </mat-form-field>
        
         <button mat-raised-button type="submit" class="btn btn-danger"  [disabled]="userForm.invalid">Login</button>

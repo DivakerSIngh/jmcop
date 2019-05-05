@@ -96,7 +96,6 @@ D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\colleg
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.csproj.CopyComplete
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.dll
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.pdb
-D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.Migrations.newtables.resources
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.csproj.GenerateResource.cache
 C:\angular4\JMCOP\college.webapi\college.entity\bin\Release\college.entity.dll.config
 C:\angular4\JMCOP\college.webapi\college.entity\bin\Release\college.entity.dll
@@ -125,3 +124,10 @@ C:\angular4\JMCOP\college.webapi\college.entity\obj\Release\college.entity.cspro
 C:\angular4\JMCOP\college.webapi\college.entity\obj\Release\college.entity.csproj.CopyComplete
 C:\angular4\JMCOP\college.webapi\college.entity\obj\Release\college.entity.dll
 C:\angular4\JMCOP\college.webapi\college.entity\obj\Release\college.entity.pdb
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\bin\Release\EntityFramework.xml
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\bin\Release\EntityFramework.SqlServer.xml
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.Migrations.newdb.resources
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.Migrations.newtableadded.resources
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.Migrations.newtableaddedvolumn.resources
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.Migrations.newtableaddedvolumnchh.resources
+D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Release\college.entity.Migrations.newtableaddedvolumnchhas.resources

@@ -31,6 +31,14 @@
                            
                             <div class="tab-pane active" id="admission">
                                 <table class="table">
+                                    <thead>
+                                        <th>No.</th>
+                                        <th>Registration No.</th>
+                                        <th>Name</th>
+                                        <th>Mobile</th>
+                                        <th>Course</th>
+                                        <th>Action</th>
+                                    </thead>
                                     <tbody>
                                         <tr *ngFor="let item of lst let i = index" [attr.data-index]="i">
                                             <td>
@@ -38,26 +46,26 @@
                                             </td>
                                            
                                             <td>
-                                               {{item.RegistrationNumber}}
+                                               {{item.registrationNumber}}
                                             </td>
                                             <td>
-                                                    {{item.CandidateName}}
+                                                    {{item.candidatename}}
                                             </td>
                                             <td>
-                                                    {{item.Mobile}}
+                                                    {{item.mobile}}
                                             </td>
                                             <td>
-                                                {{item.CourseType==1?'B.Pharma':'D.Pharma'}}
+                                                {{item.courseType==1?'B.Pharma':'D.Pharma'}}
                                         </td>
                                             
                                            
                                             <td class="td-actions">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task"  [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
+                                              <button mat-raised-button type="button" [routerLink]="['/admin/admisisonform',item.id]"  matTooltip="View And Print"  [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                  <i class="material-icons">print</i>
                                               </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove"  [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                              <!-- <button mat-raised-button type="button" matTooltip="Remove"  [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
                                                   <i class="material-icons">close</i>
-                                              </button>
+                                              </button> -->
                                           </td>
                                         </tr>
                                        

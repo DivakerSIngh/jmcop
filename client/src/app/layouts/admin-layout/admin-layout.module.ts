@@ -32,6 +32,7 @@ import { StudentFormComponent } from './admin/student-form/student-form.componen
 import { GalleryComponent } from './admin/gallery/gallery.component';
 import { EventsComponent } from './admin/events/events.component';
 import { LibraryComponent } from './admin/library/library.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -72,6 +73,7 @@ import { LibraryComponent } from './admin/library/library.component';
     GalleryComponent,
     EventsComponent,
     LibraryComponent
+    
   ]
 })
 

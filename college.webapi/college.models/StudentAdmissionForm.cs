@@ -39,6 +39,9 @@ namespace college.models
         [Required]
         public int RegistrationNumber { get; set; }
 
+       
+        public string SubmittedStatus { get; set; }
+
 
     }
 }

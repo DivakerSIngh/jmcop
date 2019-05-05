@@ -1,3 +1,141 @@
-<p>
-  student-form works!
-</p>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" id="contentToConvert">
+            <div class="col-md-12">
+                <div class="card">
+                  <div class="row">
+                      <div class="col-sm-4">
+                          <img src="../../../../../assets/img/college/logo/logo.png" style="height:55px; width:60px;margin-left: 10px;">
+                      </div>
+                      <div class="col-sm-4">
+                          <h4 class="card-title admision-title">Admission Form</h4>
+                      </div>
+                      <div class="col-sm-4">
+                          <h4 class="card-title admision-title">Registration Number : {{registrationNo}} </h4>
+                      </div>
+
+                      
+                  </div>
+                  <div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+  <div class="pic-area">
+      <img src="../../../../../assets/img/defaut.png" style="height:85px; width:126px;margin-left: 10px;">
+  </div>
+</div>
+<div class="col-sm-4"></div>
+
+                  </div>
+                    <!-- <div class="card-header card-header-danger">
+                     
+                        <h4 class="card-title">Edit Profile</h4>
+                        <p class="card-category">Complete your profile</p>
+                        
+                       
+                    </div> -->
+                    <div class="card-body">
+                        <form [formGroup]="frm" novalidate>
+                            <div class="row">
+                                <div class="col-sm-12" style="text-align:center;" >
+                                       
+                                </div>
+                                <div class="col-sm-12">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Name Of Candidate"  #refName readonly  formControlName="candidatename">
+                                    </mat-form-field>
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Father's Name"  #refName readonly  formControlName="fathername">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-sm-6">
+                                  <mat-form-field class="example-full-width">
+                                      <input matInput #refName readonly   formControlName="mothername" placeholder="Mother's Name ">
+                                   </mat-form-field>
+                                </div>
+                                <div class="col-sm-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #refName readonly   formControlName="mobile" placeholder="Phone Number">
+                                     </mat-form-field>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <mat-form-field class="example-full-width">
+                                          <input matInput #refName readonly   formControlName="email" placeholder="Email Id">
+                                       </mat-form-field>
+                                    </div>
+                                  
+
+                                             
+                            </div>
+                          <div> Academic Qualification</div> 
+                            <hr>
+                            <div class="row"  *ngFor="let item of qualification; let i = index;">
+                                    <div   class="col-sm-3">
+                                                  <mat-form-field class="example-full-width">
+                                                        <input matInput #refName readonly  value="{{item.sclass}}">
+                                                     </mat-form-field>
+                                    </div>
+                                    <div   class="col-sm-3">
+                                                  <mat-form-field class="example-full-width">
+                                                        <input matInput #refName readonly   value="{{item.yearofpassing}}">
+                                                     </mat-form-field>
+                                    </div>
+                                    <div   class="col-sm-3">
+                                            <mat-form-field class="example-full-width">
+                                                  <input matInput #refName readonly   value="{{item.subjects}}">
+                                               </mat-form-field>
+                              </div>
+                              <div   class="col-sm-3">
+                                    <mat-form-field class="example-full-width">
+                                          <input matInput #refName readonly  value="{{item.boards}}" >
+                                       </mat-form-field>
+                      </div>
+                                  
+                                 
+                                 
+
+                            </div>
+                         
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #refName readonly   formControlName="address" placeholder="Address">
+                                     </mat-form-field>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <mat-form-field class="example-full-width">
+                                          <input matInput #refName readonly   formControlName="state" placeholder="State">
+                                       </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput #refName readonly   formControlName="city" placeholder="City">
+                                         </mat-form-field>
+                                      </div>
+                            </div>
+                          
+                           
+                           
+                            
+                           
+                           
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="text-align:center;">
+                    <button mat-raised-button type="button"  (click)="print();"  class="btn btn-danger ">Print</button>
+                    <button mat-raised-button type="button" [routerLink]="['/admin/admisisonform']"   class="btn button-default">Back</button>
+                 
+            </div>
+
+    </div>
+    </div>
+  </div>
+  
