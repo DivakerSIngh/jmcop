@@ -60,12 +60,11 @@
                                             
                                            
                                             <td class="td-actions">
-                                              <button mat-raised-button type="button" [routerLink]="['/admin/admisisonform',item.id]"  matTooltip="View And Print"  [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <button mat-raised-button *ngIf="item.submittedStatus==''" type="button" [routerLink]="['/admin/admisisonform',item.id]"  matTooltip="View And Print"  [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
                                                   <i class="material-icons">print</i>
                                               </button>
-                                              <!-- <button mat-raised-button type="button" matTooltip="Remove"  [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button> -->
+                                             <span class="submit-span" *ngIf="item.submittedStatus!=''">Submitted</span>
+                                            
                                           </td>
                                         </tr>
                                        

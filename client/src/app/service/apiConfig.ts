@@ -32,5 +32,6 @@
   export const admisionForm: string = 'admission/postform';
   export const studentFormList: string = 'admission/getall?';
   export const studentGetbyid: string = 'admission/getbyid?id=';
+  export const submitForm: string = 'admission/submit?id=';
 
   

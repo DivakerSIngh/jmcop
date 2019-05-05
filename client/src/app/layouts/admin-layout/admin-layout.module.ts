@@ -21,7 +21,7 @@ import {
   MatRippleModule,
   MatFormFieldModule,
   MatTooltipModule,
-  MatSelectModule,MatGridListModule,MatProgressSpinnerModule,MatPaginatorModule
+  MatSelectModule,MatGridListModule,MatProgressSpinnerModule,MatPaginatorModule, MatSlideToggleModule
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -44,6 +44,7 @@ import { LibraryComponent } from './admin/library/library.component';
     MatPaginatorModule,
     MatInputModule,
     MatSelectModule,
+    MatSlideToggleModule,
     MatTooltipModule,
     MatGridListModule,MatProgressSpinnerModule,
     FormsModule,

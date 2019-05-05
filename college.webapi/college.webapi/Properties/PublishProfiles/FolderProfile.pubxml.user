@@ -115,10 +115,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/05/2019 14:22:46</publishTime>
     </File>
     <File Include="bin/college.webapi.dll">
-      <publishTime>05/05/2019 14:22:51</publishTime>
+      <publishTime>05/05/2019 17:17:48</publishTime>
     </File>
     <File Include="bin/college.webapi.pdb">
-      <publishTime>05/05/2019 14:22:51</publishTime>
+      <publishTime>05/05/2019 17:17:48</publishTime>
     </File>
     <File Include="bin/CommonServiceLocator.dll">
       <publishTime>04/25/2019 22:06:56</publishTime>

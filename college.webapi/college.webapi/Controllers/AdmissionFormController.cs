@@ -202,6 +202,38 @@ namespace college.webapi.Controllers
             }
 
         }
+
+
+        [HttpGet]
+        [Route("submit")]
+        public IHttpActionResult FormSubmit(int id)
+        {
+            try
+            {
+               var obj=   _admissionForm.GetById(id);
+                obj.SubmittedStatus = "Submitted";
+                _admissionForm.Update(obj);
+                var res = new ApiResponse()
+                {
+                    status = HttpStatusCode.OK.ToString(),
+                    code = (int)HttpStatusCode.OK,
+                    result = obj,
+                    pages = 0
+                };
+                return Ok(res);
+
+            }
+            catch (Exception ex)
+            {
+                return Ok();
+                throw;
+            }
+           
+
+        }
+
+
+        
     }
 }
 

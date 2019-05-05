@@ -17,6 +17,7 @@ import html2canvas from 'html2canvas';
 export class StudentFormComponent implements OnInit {
   frm:any=FormGroup;
   stuName:string;
+  stuId:number;
   registrationNo:string
   items: FormArray;
   qualification:any=[];
@@ -27,7 +28,7 @@ export class StudentFormComponent implements OnInit {
 var stId=this.route.snapshot.paramMap.get("id");
     if(stId!=null && stId!="" &&  parseInt(stId)!= NaN){
       this.get(stId);
-
+this.stuId=parseInt(stId);
       this.frm = new FormGroup({   
         candidatename: new FormControl('', [Validators.required]),
         fathername: new FormControl('', [Validators.required]),
@@ -82,8 +83,8 @@ this.registrationNo=req.registrationNumber;
   }
 
   print(){
-    debugger
-    var data = document.getElementById('contentToConvert');  
+    try {
+      var data = document.getElementById('contentToConvert');  
     html2canvas(data).then(canvas => {  
       // Few necessary setting options  
       var imgWidth = 208;   
@@ -95,7 +96,24 @@ this.registrationNo=req.registrationNumber;
       var position = 0;  
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
       pdf.save(this.stuName+'.pdf'); // Generated PDF   
-    });  
+      this.submitStudentForm();
+    }); 
+    } catch (error) {
+      
+    }
+     
   }
+  submitStudentForm(){
+    debugger
+    var result = this.http.httpGet(constants.submitForm+this.stuId);
+    result.subscribe((response) => {
+     
+      if (response.code ==200) {
+      
+      }
+    })
+    
+  }
+  
 
 }
