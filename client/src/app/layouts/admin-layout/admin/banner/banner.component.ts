@@ -70,10 +70,10 @@ getAllHomePageBanner(){
      this.bannerAllImages=response.result;
      this.bannerAllImages.forEach(element => {
        if(element.Type==1){
-        this.tiles.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
+        this.tiles.push({text: 'One', cols: 1, rows: 1, color: '#09c',url:element.ImgUrl,id:element.Id});
        }
        if(element.Type==5){
-        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
+        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#09c',url:element.ImgUrl,id:element.Id});
        }
       });
     }

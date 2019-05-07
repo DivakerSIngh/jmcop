@@ -39,5 +39,9 @@ export class CollegeLayoutComponent implements OnInit {
 };
   ngOnInit() {
   }
+  ngAfterViewInit() 
+{
+  
+}
 
 }

@@ -69,7 +69,7 @@ getAllGallery(){
     if (response.code ==200) {
      //this.gallery=response.result.filter(x=>x.Type==5);
      response.result.filter(x=>x.Type==5).forEach(element => {
-        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#f05a66',url:element.ImgUrl,id:element.Id});
+        this.gallery.push({text: 'One', cols: 1, rows: 1, color: '#09c',url:element.ImgUrl,id:element.Id});
       });
     }
    
