@@ -52,6 +52,7 @@ export class CourseComponent implements OnInit {
   }
 
   delete(req,id){
+    debugger
     this.http.httpPostLogin(constants.deleteCourse, req).subscribe((response) => {
       if (response.code ==200) {
         this.getAll();

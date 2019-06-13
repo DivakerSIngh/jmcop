@@ -87,7 +87,7 @@ namespace college.webapi.Controllers
                 };
                 return Ok(res);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return BadRequest();
             }

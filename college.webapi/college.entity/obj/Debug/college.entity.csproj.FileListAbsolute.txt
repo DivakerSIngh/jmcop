@@ -123,3 +123,7 @@ D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumn.resources
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumnchh.resources
 D:\FreelanceProject\JMCOP\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumnchhas.resources
+C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableadded.resources
+C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumn.resources
+C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumnchh.resources
+C:\angular4\JMCOP\college.webapi\college.entity\obj\Debug\college.entity.Migrations.newtableaddedvolumnchhas.resources

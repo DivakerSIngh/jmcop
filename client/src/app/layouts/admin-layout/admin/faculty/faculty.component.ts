@@ -50,12 +50,12 @@ this.pageSize=evt.pageSize;
   edit(req,id){
     this.pageMode='update'
     this.frm.setValue({
-      id:req.id,
-      name: req.name,
-      designation: req.designation,
-      qualification:req.qualification,
-      description: req.description,
-      imgUrl:req.imgUrl,
+      id:req.Id,
+      name: req.Name,
+      designation: req.Designation,
+      qualification:req.Qualification,
+      description: req.Description,
+      imgUrl:req.ImgUrl,
     })
   }
 
