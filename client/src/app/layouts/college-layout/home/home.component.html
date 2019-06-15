@@ -10,6 +10,7 @@
             [config]="slideConfig" >
 <div ngxSlickItem *ngFor="let slide of sliderData" class="slide">
   <img src="{{slide.ImgUrl}}" alt="" width="100%">
+  <div class="text">Caption Text</div>
 </div>
 </ngx-slick-carousel>
 <marquee direction="left" class="marquw-home" onmouseover="this.stop();" onmouseout="this.start();">

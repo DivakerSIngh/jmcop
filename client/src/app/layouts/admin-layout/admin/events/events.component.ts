@@ -69,7 +69,7 @@ getAllHomePageBanner(){
      //this.events=response.result.filter(x=>x.Type==5);
      response.result.filter(x=>x.Type==4).forEach(element => {
       
-        this.events.push({text: 'One', cols: 1, rows: 1, color: '#09c',url:element.ImgUrl,id:element.Id});
+        this.events.push({text: 'One', cols: 1, rows: 1, color: '#f38003',url:element.ImgUrl,id:element.Id});
       
       });
     }
