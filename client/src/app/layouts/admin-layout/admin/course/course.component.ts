@@ -41,16 +41,18 @@ export class CourseComponent implements OnInit {
 
 
   edit(req,id){
+    debugger
     this.pageMode='update'
     this.frm.setValue({
-      id:req.id,
-      name: req.name,
-      seates: req.seates,
-      description: req.description,
+      id:req.Id,
+      name: req.Name,
+      seates: req.Seates,
+      description: req.Description,
     })
   }
 
   delete(req,id){
+    debugger
     this.http.httpPostLogin(constants.deleteCourse, req).subscribe((response) => {
       if (response.code ==200) {
         this.getAll();
