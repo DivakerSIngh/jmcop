@@ -94,31 +94,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2019 22:06:55</publishTime>
     </File>
     <File Include="bin/college.%40interface.dll">
-      <publishTime>04/29/2019 22:36:46</publishTime>
+      <publishTime>06/16/2019 14:08:16</publishTime>
     </File>
     <File Include="bin/college.%40interface.pdb">
-      <publishTime>04/29/2019 22:36:46</publishTime>
+      <publishTime>06/16/2019 14:08:16</publishTime>
     </File>
     <File Include="bin/college.entity.dll">
-      <publishTime>05/05/2019 14:22:47</publishTime>
+      <publishTime>06/16/2019 14:08:17</publishTime>
     </File>
     <File Include="bin/college.entity.dll.config">
       <publishTime>04/28/2019 18:01:49</publishTime>
     </File>
     <File Include="bin/college.entity.pdb">
-      <publishTime>05/05/2019 14:22:47</publishTime>
+      <publishTime>06/16/2019 14:08:17</publishTime>
     </File>
     <File Include="bin/college.models.dll">
-      <publishTime>05/05/2019 14:22:46</publishTime>
+      <publishTime>06/16/2019 14:08:15</publishTime>
     </File>
     <File Include="bin/college.models.pdb">
-      <publishTime>05/05/2019 14:22:46</publishTime>
+      <publishTime>06/16/2019 14:08:15</publishTime>
     </File>
     <File Include="bin/college.webapi.dll">
-      <publishTime>05/05/2019 17:17:48</publishTime>
+      <publishTime>06/16/2019 14:08:18</publishTime>
     </File>
     <File Include="bin/college.webapi.pdb">
-      <publishTime>05/05/2019 17:17:48</publishTime>
+      <publishTime>06/16/2019 14:08:18</publishTime>
     </File>
     <File Include="bin/CommonServiceLocator.dll">
       <publishTime>04/25/2019 22:06:56</publishTime>
